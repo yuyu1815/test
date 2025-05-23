@@ -1,0 +1,31 @@
+openapi: 3.1.0
+info:
+  title: text-one-line-complete
+  description: Provides one-line completion for text in natural language.
+  version: DEV
+  x-namespace: tasks.text.complete.oneLine.trfNlc
+  x-task-name: text-one-line-complete
+servers:
+- url: /
+components:
+  schemas:
+    TextOneLineCompleteTaskParams:
+      type: object
+      properties:
+        context:
+          type: string
+          description: Text to complete.
+        profile:
+          type: string
+          description: |-
+            Completion profile. Possible values:
+            * `Always` - try to complete always when it is possible;
+            * `Moderate` - try to complete only when pretty sure that completion is good.
+          enum:
+          - Always
+          - Moderate
+      required:
+      - context
+      - profile
+      x-task-parameters: true
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema

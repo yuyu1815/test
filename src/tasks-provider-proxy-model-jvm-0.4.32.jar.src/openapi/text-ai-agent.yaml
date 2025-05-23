@@ -1,0 +1,22 @@
+openapi: 3.1.0
+info:
+  title: text-ai-agent
+  description: Gets text data from the model.
+  version: DEV
+  x-namespace: tasks.text.aiAgent
+  x-task-name: text-ai-agent
+servers:
+- url: /
+components:
+  schemas:
+    TextAiAgentTaskParams:
+      type: object
+      properties:
+        text:
+          type: string
+          description: A text from the AI agents side to which the model should give
+            an answer.
+      required:
+      - text
+      x-task-parameters: true
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema

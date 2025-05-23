@@ -1,0 +1,13 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.activation.config">
+  <dependencies>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-ui.activation.data.model.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <registryKey defaultValue="" description="License ID that would replicate an exceeded quota" key="matterhorn.debug.quota.exceeded.license.id"/>
+  </extensions>
+</idea-plugin>

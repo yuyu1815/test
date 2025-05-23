@@ -1,0 +1,82 @@
+/*    */ package org.jetbrains.jewel.ui.component;
+/*    */ 
+/*    */ import androidx.compose.runtime.Composable;
+/*    */ import androidx.compose.runtime.ComposableTarget;
+/*    */ import androidx.compose.runtime.Composer;
+/*    */ import androidx.compose.runtime.ComposerKt;
+/*    */ import androidx.compose.ui.Modifier;
+/*    */ import kotlin.Metadata;
+/*    */ import kotlin.Unit;
+/*    */ import kotlin.jvm.functions.Function1;
+/*    */ import kotlin.jvm.functions.Function2;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ @Metadata(mv = {2, 0, 0}, k = 3, xi = 48)
+/*    */ final class null
+/*    */   implements Function2<Composer, Integer, Unit>
+/*    */ {
+/*    */   @Composable
+/*    */   @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+/*    */   public final void invoke(Composer $composer, int $changed) {
+/* 71 */     if (($changed & 0x3) != 2 || !$composer.getSkipping()) { if (ComposerKt.isTraceInProgress()) ComposerKt.traceEventStart(423315299, $changed, -1, "org.jetbrains.jewel.ui.component.ContextMenu.<anonymous>.<anonymous> (ContextMenu.kt:70)");  MenuKt.MenuContent(this.$modifier, null, this.$content, $composer, 0, 2); if (ComposerKt.isTraceInProgress()) ComposerKt.traceEventEnd();  } else { $composer.skipToGroupEnd(); }
+/*    */   
+/*    */   }
+/*    */   
+/*    */   null(Modifier $modifier, Function1<MenuScope, Unit> $content) {}
+/*    */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\jewel-ui-243-0.27.0.jar!\org\jetbrains\jewe\\ui\component\ContextMenuKt$ContextMenu$4$1.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

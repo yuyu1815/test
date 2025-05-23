@@ -1,0 +1,13 @@
+$schema: 'https://json-schema.org/draft/2020-12/schema'
+properties:
+  query:
+    type: string
+    description: A query to be sent to search engine.
+    minLength: 1
+  maxResults:
+    type: integer
+    description: The maximum number of search results to return.
+    minimum: 1
+required:
+  - query
+  - maxResults

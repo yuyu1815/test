@@ -1,0 +1,21 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.activation.data.impl.enterprise">
+  <dependencies>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-ui.activation.platform.main"/>
+    <module name="matterhorn.ej-ui.activation.data.model.main"/>
+    <module name="matterhorn.ej-ui.activation.data.repos.main"/>
+    <plugin id="com.intellij.platform.ide.provisioner"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAieProvisionRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.impl.enterprise.JunieAieProvisionRepositoryImpl"
+      overrides="true"
+    />
+  </extensions>
+
+</idea-plugin>

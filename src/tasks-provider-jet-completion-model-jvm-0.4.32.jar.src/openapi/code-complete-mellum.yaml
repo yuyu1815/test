@@ -1,0 +1,87 @@
+openapi: 3.1.0
+info:
+  title: code-complete-mellum
+  description: Mellum code completion task for both single-line and multi-line cases.
+  version: DEV
+  x-namespace: tasks.code.complete.mellum
+  x-task-name: code-complete-mellum
+servers:
+- url: /
+components:
+  schemas:
+    ContextItem:
+      type: object
+      properties:
+        type:
+          type: string
+        filepath:
+          type: string
+        content:
+          type: string
+      required:
+      - content
+      - filepath
+      - type
+    CodeCompleteMellumTaskParams:
+      type: object
+      properties:
+        prefix:
+          type: string
+          description: The source code before the caret.
+        suffix:
+          type: string
+          description: The source code after the caret.
+        language:
+          type: string
+          description: The code language.
+          enum:
+          - KOTLIN
+          - JAVA
+          - PYTHON
+          - HCL
+          - OTHER
+        filepath:
+          type: string
+          description: "The relative path of the file, where completion is requested,\
+            \ with filename and extension."
+        multilineAllowed:
+          type: boolean
+          description: Whether multi-line completion is allowed.
+        context:
+          type: array
+          default: []
+          items:
+            $ref: "#/components/schemas/ContextItem"
+          x-field-extra-annotation: '@kotlinx.serialization.EncodeDefault'
+        explicit:
+          type: boolean
+          default: true
+          x-field-extra-annotation: '@kotlinx.serialization.EncodeDefault'
+        useControlModel:
+          type: string
+          description: The control mode.
+          enum:
+          - "ON"
+          - "OFF"
+          - SILENT
+        generateIndents:
+          type: boolean
+          default: false
+          x-field-extra-annotation: '@kotlinx.serialization.EncodeDefault'
+        useCloneFinder:
+          type: boolean
+          default: false
+          x-field-extra-annotation: '@kotlinx.serialization.EncodeDefault'
+      required:
+      - context
+      - explicit
+      - filepath
+      - generateIndents
+      - language
+      - multilineAllowed
+      - prefix
+      - suffix
+      - useCloneFinder
+      - useControlModel
+      x-task-parameters: true
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema

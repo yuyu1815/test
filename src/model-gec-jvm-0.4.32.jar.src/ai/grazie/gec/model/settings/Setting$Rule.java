@@ -1,0 +1,194 @@
+/*    */ package ai.grazie.gec.model.settings;
+/*    */ import java.util.Arrays;
+/*    */ import kotlin.Metadata;
+/*    */ import kotlin.jvm.internal.Intrinsics;
+/*    */ import kotlinx.serialization.DeserializationStrategy;
+/*    */ import kotlinx.serialization.KSerializer;
+/*    */ import kotlinx.serialization.SerializationStrategy;
+/*    */ import kotlinx.serialization.descriptors.SerialDescriptor;
+/*    */ import kotlinx.serialization.encoding.CompositeDecoder;
+/*    */ import kotlinx.serialization.encoding.CompositeEncoder;
+/*    */ import kotlinx.serialization.encoding.Decoder;
+/*    */ import kotlinx.serialization.encoding.Encoder;
+/*    */ import kotlinx.serialization.internal.GeneratedSerializer;
+/*    */ import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor;
+/*    */ import kotlinx.serialization.internal.StringSerializer;
+/*    */ import org.jetbrains.annotations.NotNull;
+/*    */ import org.jetbrains.annotations.Nullable;
+/*    */ 
+/*    */ @Serializable
+/*    */ @SerialName("Rule")
+/*    */ @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000^\n\002\030\002\n\002\030\002\n\000\n\002\020\b\n\000\n\002\020\016\n\002\b\002\n\002\030\002\n\002\b\003\n\002\020\021\n\002\030\002\n\002\b\002\n\002\030\002\n\000\n\002\030\002\n\002\b\034\n\002\020\013\n\000\n\002\020\000\n\002\b\003\n\002\020\002\n\002\b\002\n\002\030\002\n\000\n\002\030\002\n\002\b\005\b\b\030\000 =2\0020\001:\003<=>Bu\b\021\022\006\020\002\032\0020\003\022\b\020\004\032\004\030\0010\005\022\b\020\006\032\004\030\0010\005\022\b\020\007\032\004\030\0010\b\022\b\020\t\032\004\030\0010\005\022\b\020\n\032\004\030\0010\005\022\016\020\013\032\n\022\004\022\0020\r\030\0010\f\022\016\020\016\032\n\022\004\022\0020\001\030\0010\f\022\b\020\017\032\004\030\0010\020\022\b\020\021\032\004\030\0010\022¢\006\002\020\023BW\022\006\020\004\032\0020\005\022\006\020\006\032\0020\005\022\006\020\007\032\0020\b\022\006\020\t\032\0020\005\022\b\020\n\032\004\030\0010\005\022\f\020\013\032\b\022\004\022\0020\r0\f\022\f\020\016\032\b\022\004\022\0020\0010\f\022\n\b\002\020\017\032\004\030\0010\020¢\006\002\020\024J\t\020$\032\0020\005HÆ\003J\t\020%\032\0020\005HÆ\003J\t\020&\032\0020\bHÆ\003J\t\020'\032\0020\005HÆ\003J\013\020(\032\004\030\0010\005HÆ\003J\024\020)\032\b\022\004\022\0020\r0\fHÆ\003¢\006\002\020\033J\024\020*\032\b\022\004\022\0020\0010\fHÆ\003¢\006\002\020\"J\013\020+\032\004\030\0010\020HÆ\003Jn\020,\032\0020\0002\b\b\002\020\004\032\0020\0052\b\b\002\020\006\032\0020\0052\b\b\002\020\007\032\0020\b2\b\b\002\020\t\032\0020\0052\n\b\002\020\n\032\004\030\0010\0052\016\b\002\020\013\032\b\022\004\022\0020\r0\f2\016\b\002\020\016\032\b\022\004\022\0020\0010\f2\n\b\002\020\017\032\004\030\0010\020HÆ\001¢\006\002\020-J\023\020.\032\0020/2\b\0200\032\004\030\00101H\002J\b\0202\032\0020\003H\026J\b\0203\032\0020\005H\026J&\0204\032\002052\006\0206\032\0020\0002\006\0207\032\002082\006\0209\032\0020:HÁ\001¢\006\002\b;R\024\020\007\032\0020\bX\004¢\006\b\n\000\032\004\b\025\020\026R\021\020\t\032\0020\005¢\006\b\n\000\032\004\b\027\020\030R\024\020\006\032\0020\005X\004¢\006\b\n\000\032\004\b\031\020\030R\031\020\013\032\b\022\004\022\0020\r0\f¢\006\n\n\002\020\034\032\004\b\032\020\033R\023\020\n\032\004\030\0010\005¢\006\b\n\000\032\004\b\035\020\030R\023\020\017\032\004\030\0010\020¢\006\b\n\000\032\004\b\036\020\037R\024\020\004\032\0020\005X\004¢\006\b\n\000\032\004\b \020\030R\031\020\016\032\b\022\004\022\0020\0010\f¢\006\n\n\002\020#\032\004\b!\020\"¨\006?"}, d2 = {"Lai/grazie/gec/model/settings/Setting$Rule;", "Lai/grazie/gec/model/settings/Setting;", "seen1", "", "id", "", "displayName", "defaultValue", "Lai/grazie/gec/model/settings/Setting$Value;", "description", "externalUrl", "examples", "", "Lai/grazie/gec/model/settings/Setting$Rule$Example;", "subSettings", "fusedParameter", "Lai/grazie/gec/model/settings/Setting$Parameter;", "serializationConstructorMarker", "Lkotlinx/serialization/internal/SerializationConstructorMarker;", "(ILjava/lang/String;Ljava/lang/String;Lai/grazie/gec/model/settings/Setting$Value;Ljava/lang/String;Ljava/lang/String;[Lai/grazie/gec/model/settings/Setting$Rule$Example;[Lai/grazie/gec/model/settings/Setting;Lai/grazie/gec/model/settings/Setting$Parameter;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V", "(Ljava/lang/String;Ljava/lang/String;Lai/grazie/gec/model/settings/Setting$Value;Ljava/lang/String;Ljava/lang/String;[Lai/grazie/gec/model/settings/Setting$Rule$Example;[Lai/grazie/gec/model/settings/Setting;Lai/grazie/gec/model/settings/Setting$Parameter;)V", "getDefaultValue", "()Lai/grazie/gec/model/settings/Setting$Value;", "getDescription", "()Ljava/lang/String;", "getDisplayName", "getExamples", "()[Lai/grazie/gec/model/settings/Setting$Rule$Example;", "[Lai/grazie/gec/model/settings/Setting$Rule$Example;", "getExternalUrl", "getFusedParameter", "()Lai/grazie/gec/model/settings/Setting$Parameter;", "getId", "getSubSettings", "()[Lai/grazie/gec/model/settings/Setting;", "[Lai/grazie/gec/model/settings/Setting;", "component1", "component2", "component3", "component4", "component5", "component6", "component7", "component8", "copy", "(Ljava/lang/String;Ljava/lang/String;Lai/grazie/gec/model/settings/Setting$Value;Ljava/lang/String;Ljava/lang/String;[Lai/grazie/gec/model/settings/Setting$Rule$Example;[Lai/grazie/gec/model/settings/Setting;Lai/grazie/gec/model/settings/Setting$Parameter;)Lai/grazie/gec/model/settings/Setting$Rule;", "equals", "", "other", "", "hashCode", "toString", "write$Self", "", "self", "output", "Lkotlinx/serialization/encoding/CompositeEncoder;", "serialDesc", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "write$Self$model_gec", "$serializer", "Companion", "Example", "model-gec"})
+/*    */ public final class Rule extends Setting {
+/*    */   @NotNull
+/* 24 */   public static final Companion Companion = new Companion(null); @NotNull private final String id; @NotNull private final String displayName; @NotNull private final Setting.Value defaultValue; @NotNull private final String description; @Nullable private final String externalUrl; @NotNull private final Example[] examples; @NotNull private final Setting[] subSettings; @Nullable private final Setting.Parameter fusedParameter; @JvmField @NotNull private static final KSerializer<Object>[] $childSerializers; static { KSerializer[] arrayOfKSerializer = new KSerializer[8]; arrayOfKSerializer[0] = null; arrayOfKSerializer[1] = null; arrayOfKSerializer[2] = null; arrayOfKSerializer[3] = null; arrayOfKSerializer[4] = null; arrayOfKSerializer[5] = (KSerializer)new ReferenceArraySerializer(Reflection.getOrCreateKotlinClass(Example.class), (KSerializer)Example.$serializer.INSTANCE); arrayOfKSerializer[6] = (KSerializer)new ReferenceArraySerializer(Reflection.getOrCreateKotlinClass(Setting.class), Setting.Companion.serializer()); arrayOfKSerializer[7] = null; $childSerializers = (KSerializer<Object>[])arrayOfKSerializer; } @Deprecated(message = "This synthesized declaration should not be used directly", replaceWith = @ReplaceWith(expression = "", imports = {}), level = DeprecationLevel.HIDDEN) @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\0006\n\000\n\002\030\002\n\002\030\002\n\002\b\002\n\002\030\002\n\002\b\003\n\002\020\021\n\002\030\002\n\002\b\003\n\002\030\002\n\000\n\002\020\002\n\000\n\002\030\002\n\002\b\002\bÇ\002\030\0002\b\022\004\022\0020\0020\001B\007\b\002¢\006\002\020\003J\030\020\b\032\f\022\b\022\006\022\002\b\0030\n0\tHÖ\001¢\006\002\020\013J\021\020\f\032\0020\0022\006\020\r\032\0020\016HÖ\001J\031\020\017\032\0020\0202\006\020\021\032\0020\0222\006\020\023\032\0020\002HÖ\001R\024\020\004\032\0020\0058VXÖ\005¢\006\006\032\004\b\006\020\007¨\006\024"}, d2 = {"ai/grazie/gec/model/settings/Setting.Rule.$serializer", "Lkotlinx/serialization/internal/GeneratedSerializer;", "Lai/grazie/gec/model/settings/Setting$Rule;", "()V", "descriptor", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "getDescriptor", "()Lkotlinx/serialization/descriptors/SerialDescriptor;", "childSerializers", "", "Lkotlinx/serialization/KSerializer;", "()[Lkotlinx/serialization/KSerializer;", "deserialize", "decoder", "Lkotlinx/serialization/encoding/Decoder;", "serialize", "", "encoder", "Lkotlinx/serialization/encoding/Encoder;", "value", "model-gec"}) public static final class $serializer implements GeneratedSerializer<Rule> { @NotNull public static final $serializer INSTANCE = new $serializer(); @NotNull public KSerializer<?>[] typeParametersSerializers() { return (KSerializer<?>[])GeneratedSerializer.DefaultImpls.typeParametersSerializers(this); } @NotNull public SerialDescriptor getDescriptor() { return (SerialDescriptor)descriptor; } @NotNull public KSerializer<?>[] childSerializers() { KSerializer[] arrayOfKSerializer1 = (KSerializer[])Setting.Rule.$childSerializers, arrayOfKSerializer2 = new KSerializer[8]; arrayOfKSerializer2[0] = (KSerializer)StringSerializer.INSTANCE; arrayOfKSerializer2[1] = (KSerializer)StringSerializer.INSTANCE; arrayOfKSerializer2[2] = (KSerializer)Setting.Value.$serializer.INSTANCE; arrayOfKSerializer2[3] = (KSerializer)StringSerializer.INSTANCE; arrayOfKSerializer2[4] = BuiltinSerializersKt.getNullable((KSerializer)StringSerializer.INSTANCE); arrayOfKSerializer2[5] = arrayOfKSerializer1[5]; arrayOfKSerializer2[6] = arrayOfKSerializer1[6]; arrayOfKSerializer2[7] = BuiltinSerializersKt.getNullable((KSerializer)Setting.Parameter.$serializer.INSTANCE); return (KSerializer<?>[])arrayOfKSerializer2; } @NotNull public Setting.Rule deserialize(@NotNull Decoder decoder) { Intrinsics.checkNotNullParameter(decoder, "decoder"); SerialDescriptor serialDescriptor = getDescriptor(); boolean bool = true; int i = 0; String str1 = null, str2 = null; Setting.Value value = null; String str3 = null, str4 = null; Setting.Rule.Example[] arrayOfExample = null; Setting[] arrayOfSetting = null; Setting.Parameter parameter = null; CompositeDecoder compositeDecoder = decoder.beginStructure(serialDescriptor); KSerializer[] arrayOfKSerializer = (KSerializer[])Setting.Rule.$childSerializers; if (compositeDecoder.decodeSequentially()) { str1 = compositeDecoder.decodeStringElement(serialDescriptor, 0); i |= 0x1; str2 = compositeDecoder.decodeStringElement(serialDescriptor, 1); i |= 0x2; value = (Setting.Value)compositeDecoder.decodeSerializableElement(serialDescriptor, 2, (DeserializationStrategy)Setting.Value.$serializer.INSTANCE, value); i |= 0x4; str3 = compositeDecoder.decodeStringElement(serialDescriptor, 3); i |= 0x8; str4 = (String)compositeDecoder.decodeNullableSerializableElement(serialDescriptor, 4, (DeserializationStrategy)StringSerializer.INSTANCE, str4); i |= 0x10; arrayOfExample = (Setting.Rule.Example[])compositeDecoder.decodeSerializableElement(serialDescriptor, 5, (DeserializationStrategy)arrayOfKSerializer[5], arrayOfExample); i |= 0x20; arrayOfSetting = (Setting[])compositeDecoder.decodeSerializableElement(serialDescriptor, 6, (DeserializationStrategy)arrayOfKSerializer[6], arrayOfSetting); i |= 0x40; parameter = (Setting.Parameter)compositeDecoder.decodeNullableSerializableElement(serialDescriptor, 7, (DeserializationStrategy)Setting.Parameter.$serializer.INSTANCE, parameter); i |= 0x80; } else { while (bool) { int j = compositeDecoder.decodeElementIndex(serialDescriptor); switch (j) { case -1: bool = false; continue;case 0: str1 = compositeDecoder.decodeStringElement(serialDescriptor, 0); i |= 0x1; continue;case 1: str2 = compositeDecoder.decodeStringElement(serialDescriptor, 1); i |= 0x2; continue;case 2: value = (Setting.Value)compositeDecoder.decodeSerializableElement(serialDescriptor, 2, (DeserializationStrategy)Setting.Value.$serializer.INSTANCE, value); i |= 0x4; continue;case 3: str3 = compositeDecoder.decodeStringElement(serialDescriptor, 3); i |= 0x8; continue;case 4: str4 = (String)compositeDecoder.decodeNullableSerializableElement(serialDescriptor, 4, (DeserializationStrategy)StringSerializer.INSTANCE, str4); i |= 0x10; continue;case 5: arrayOfExample = (Setting.Rule.Example[])compositeDecoder.decodeSerializableElement(serialDescriptor, 5, (DeserializationStrategy)arrayOfKSerializer[5], arrayOfExample); i |= 0x20; continue;case 6: arrayOfSetting = (Setting[])compositeDecoder.decodeSerializableElement(serialDescriptor, 6, (DeserializationStrategy)arrayOfKSerializer[6], arrayOfSetting); i |= 0x40; continue;case 7: parameter = (Setting.Parameter)compositeDecoder.decodeNullableSerializableElement(serialDescriptor, 7, (DeserializationStrategy)Setting.Parameter.$serializer.INSTANCE, parameter); i |= 0x80; continue; }  throw new UnknownFieldException(j); }  }  compositeDecoder.endStructure(serialDescriptor); return new Setting.Rule(i, str1, str2, value, str3, str4, arrayOfExample, arrayOfSetting, parameter, null); } public void serialize(@NotNull Encoder encoder, @NotNull Setting.Rule value) { Intrinsics.checkNotNullParameter(encoder, "encoder"); Intrinsics.checkNotNullParameter(value, "value"); SerialDescriptor serialDescriptor = getDescriptor(); CompositeEncoder compositeEncoder = encoder.beginStructure(serialDescriptor); Setting.Rule.write$Self$model_gec(value, compositeEncoder, serialDescriptor); compositeEncoder.endStructure(serialDescriptor); } static { PluginGeneratedSerialDescriptor pluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("Rule", INSTANCE, 8); pluginGeneratedSerialDescriptor.addElement("id", false); pluginGeneratedSerialDescriptor.addElement("displayName", false); pluginGeneratedSerialDescriptor.addElement("defaultValue", false); pluginGeneratedSerialDescriptor.addElement("description", false); pluginGeneratedSerialDescriptor.addElement("externalUrl", false); pluginGeneratedSerialDescriptor.addElement("examples", false); pluginGeneratedSerialDescriptor.addElement("subSettings", false); pluginGeneratedSerialDescriptor.addElement("fusedParameter", true); descriptor = pluginGeneratedSerialDescriptor; } } @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\026\n\002\030\002\n\002\020\000\n\002\b\002\n\002\030\002\n\002\030\002\n\000\b\003\030\0002\0020\001B\007\b\002¢\006\002\020\002J\017\020\003\032\b\022\004\022\0020\0050\004HÆ\001¨\006\006"}, d2 = {"Lai/grazie/gec/model/settings/Setting$Rule$Companion;", "", "()V", "serializer", "Lkotlinx/serialization/KSerializer;", "Lai/grazie/gec/model/settings/Setting$Rule;", "model-gec"}) public static final class Companion { private Companion() {} @NotNull public final KSerializer<Setting.Rule> serializer() { return (KSerializer<Setting.Rule>)Setting.Rule.$serializer.INSTANCE; }
+/*    */      }
+/*    */   @NotNull
+/* 27 */   public String getId() { return this.id; } @NotNull
+/* 28 */   public String getDisplayName() { return this.displayName; } @NotNull
+/* 29 */   public Setting.Value getDefaultValue() { return this.defaultValue; } @NotNull
+/* 30 */   public final String getDescription() { return this.description; } @Nullable
+/* 31 */   public final String getExternalUrl() { return this.externalUrl; } @NotNull
+/* 32 */   public final Example[] getExamples() { return this.examples; } @NotNull
+/* 33 */   public final Setting[] getSubSettings() { return this.subSettings; }
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */   
+/*    */   @Nullable
+/*    */   public final Setting.Parameter getFusedParameter() {
+/* 40 */     return this.fusedParameter;
+/* 41 */   } public Rule(@NotNull String id, @NotNull String displayName, @NotNull Setting.Value defaultValue, @NotNull String description, @Nullable String externalUrl, @NotNull Example[] examples, @NotNull Setting[] subSettings, @Nullable Setting.Parameter fusedParameter) { super(null); this.id = id; this.displayName = displayName; this.defaultValue = defaultValue; this.description = description; this.externalUrl = externalUrl; this.examples = examples;
+/*    */     this.subSettings = subSettings;
+/* 43 */     this.fusedParameter = fusedParameter; } public boolean equals(@Nullable Object other) { if (this == other) return true; 
+/* 44 */     if (!(other instanceof Rule)) return false;
+/*    */     
+/* 46 */     if (!Intrinsics.areEqual(getId(), ((Rule)other).getId())) return false; 
+/* 47 */     if (!Intrinsics.areEqual(getDisplayName(), ((Rule)other).getDisplayName())) return false; 
+/* 48 */     if (!Intrinsics.areEqual(getDefaultValue(), ((Rule)other).getDefaultValue())) return false; 
+/* 49 */     if (!Intrinsics.areEqual(this.description, ((Rule)other).description)) return false; 
+/* 50 */     if (!Intrinsics.areEqual(this.externalUrl, ((Rule)other).externalUrl)) return false; 
+/* 51 */     if (!Intrinsics.areEqual(this.fusedParameter, ((Rule)other).fusedParameter)) return false; 
+/* 52 */     if (!Arrays.equals((Object[])this.examples, (Object[])((Rule)other).examples)) return false; 
+/* 53 */     return Arrays.equals((Object[])this.subSettings, (Object[])((Rule)other).subSettings); }
+/*    */ 
+/*    */   
+/*    */   public int hashCode() {
+/* 57 */     int result = getId().hashCode();
+/* 58 */     result = 31 * result + getDisplayName().hashCode();
+/* 59 */     result = 31 * result + getDefaultValue().hashCode();
+/* 60 */     result = 31 * result + this.description.hashCode();
+/* 61 */     result = 31 * result + ((this.externalUrl != null) ? this.externalUrl.hashCode() : 0);
+/* 62 */     result = 31 * result + ((this.fusedParameter != null) ? this.fusedParameter.hashCode() : 0);
+/* 63 */     result = 31 * result + Arrays.hashCode((Object[])this.examples);
+/* 64 */     result = 31 * result + Arrays.hashCode((Object[])this.subSettings);
+/* 65 */     return result;
+/*    */   }
+/*    */   
+/*    */   @NotNull
+/* 69 */   public String toString() { Intrinsics.checkNotNullExpressionValue(Arrays.toString((Object[])this.subSettings), "toString(...)"); return "Rule(id=" + getId() + ", defaultValue=" + getDefaultValue().getId() + ", subSettings=" + Arrays.toString((Object[])this.subSettings) + ")"; } @NotNull public final String component1() { return this.id; } @NotNull public final String component2() { return this.displayName; } @NotNull public final Setting.Value component3() { return this.defaultValue; } @NotNull public final String component4() { return this.description; } @Nullable public final String component5() { return this.externalUrl; } @NotNull public final Example[] component6() { return this.examples; } @NotNull public final Setting[] component7() { return this.subSettings; }
+/*    */   @Nullable public final Setting.Parameter component8() { return this.fusedParameter; }
+/*    */   @NotNull public final Rule copy(@NotNull String id, @NotNull String displayName, @NotNull Setting.Value defaultValue, @NotNull String description, @Nullable String externalUrl, @NotNull Example[] examples, @NotNull Setting[] subSettings, @Nullable Setting.Parameter fusedParameter) { Intrinsics.checkNotNullParameter(id, "id"); Intrinsics.checkNotNullParameter(displayName, "displayName"); Intrinsics.checkNotNullParameter(defaultValue, "defaultValue"); Intrinsics.checkNotNullParameter(description, "description"); Intrinsics.checkNotNullParameter(examples, "examples"); Intrinsics.checkNotNullParameter(subSettings, "subSettings"); return new Rule(id, displayName, defaultValue, description, externalUrl, examples, subSettings, fusedParameter); }
+/* 72 */   @Serializable @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000B\n\002\030\002\n\002\020\000\n\000\n\002\020\b\n\000\n\002\020\016\n\000\n\002\020\021\n\000\n\002\030\002\n\002\b\f\n\002\020\013\n\002\b\004\n\002\020\002\n\002\b\002\n\002\030\002\n\000\n\002\030\002\n\002\b\004\b\b\030\000 #2\0020\001:\002\"#B3\b\021\022\006\020\002\032\0020\003\022\b\020\004\032\004\030\0010\005\022\016\020\006\032\n\022\004\022\0020\005\030\0010\007\022\b\020\b\032\004\030\0010\t¢\006\002\020\nB\033\022\006\020\004\032\0020\005\022\f\020\006\032\b\022\004\022\0020\0050\007¢\006\002\020\013J\t\020\021\032\0020\005HÆ\003J\024\020\022\032\b\022\004\022\0020\0050\007HÆ\003¢\006\002\020\rJ(\020\023\032\0020\0002\b\b\002\020\004\032\0020\0052\016\b\002\020\006\032\b\022\004\022\0020\0050\007HÆ\001¢\006\002\020\024J\023\020\025\032\0020\0262\b\020\027\032\004\030\0010\001H\002J\b\020\030\032\0020\003H\026J\t\020\031\032\0020\005HÖ\001J&\020\032\032\0020\0332\006\020\034\032\0020\0002\006\020\035\032\0020\0362\006\020\037\032\0020 HÁ\001¢\006\002\b!R\031\020\006\032\b\022\004\022\0020\0050\007¢\006\n\n\002\020\016\032\004\b\f\020\rR\021\020\004\032\0020\005¢\006\b\n\000\032\004\b\017\020\020¨\006$"}, d2 = {"Lai/grazie/gec/model/settings/Setting$Rule$Example;", "", "seen1", "", "text", "", "corrected", "", "serializationConstructorMarker", "Lkotlinx/serialization/internal/SerializationConstructorMarker;", "(ILjava/lang/String;[Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V", "(Ljava/lang/String;[Ljava/lang/String;)V", "getCorrected", "()[Ljava/lang/String;", "[Ljava/lang/String;", "getText", "()Ljava/lang/String;", "component1", "component2", "copy", "(Ljava/lang/String;[Ljava/lang/String;)Lai/grazie/gec/model/settings/Setting$Rule$Example;", "equals", "", "other", "hashCode", "toString", "write$Self", "", "self", "output", "Lkotlinx/serialization/encoding/CompositeEncoder;", "serialDesc", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "write$Self$model_gec", "$serializer", "Companion", "model-gec"}) public static final class Example { @NotNull public static final Companion Companion = new Companion(null); @NotNull private final String text; @NotNull private final String[] corrected; @JvmField @NotNull
+/* 73 */     private static final KSerializer<Object>[] $childSerializers; public Example(@NotNull String text, @NotNull String[] corrected) { this.text = text; this.corrected = corrected; } static { KSerializer[] arrayOfKSerializer = new KSerializer[2]; arrayOfKSerializer[0] = null; arrayOfKSerializer[1] = (KSerializer)new ReferenceArraySerializer(Reflection.getOrCreateKotlinClass(String.class), (KSerializer)StringSerializer.INSTANCE); $childSerializers = (KSerializer<Object>[])arrayOfKSerializer; } @NotNull public final String getText() { return this.text; } @NotNull public final String[] getCorrected() { return this.corrected; }
+/*    */     @Deprecated(message = "This synthesized declaration should not be used directly", replaceWith = @ReplaceWith(expression = "", imports = {}), level = DeprecationLevel.HIDDEN) @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\0006\n\000\n\002\030\002\n\002\030\002\n\002\b\002\n\002\030\002\n\002\b\003\n\002\020\021\n\002\030\002\n\002\b\003\n\002\030\002\n\000\n\002\020\002\n\000\n\002\030\002\n\002\b\002\bÇ\002\030\0002\b\022\004\022\0020\0020\001B\007\b\002¢\006\002\020\003J\030\020\b\032\f\022\b\022\006\022\002\b\0030\n0\tHÖ\001¢\006\002\020\013J\021\020\f\032\0020\0022\006\020\r\032\0020\016HÖ\001J\031\020\017\032\0020\0202\006\020\021\032\0020\0222\006\020\023\032\0020\002HÖ\001R\024\020\004\032\0020\0058VXÖ\005¢\006\006\032\004\b\006\020\007¨\006\024"}, d2 = {"ai/grazie/gec/model/settings/Setting.Rule.Example.$serializer", "Lkotlinx/serialization/internal/GeneratedSerializer;", "Lai/grazie/gec/model/settings/Setting$Rule$Example;", "()V", "descriptor", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "getDescriptor", "()Lkotlinx/serialization/descriptors/SerialDescriptor;", "childSerializers", "", "Lkotlinx/serialization/KSerializer;", "()[Lkotlinx/serialization/KSerializer;", "deserialize", "decoder", "Lkotlinx/serialization/encoding/Decoder;", "serialize", "", "encoder", "Lkotlinx/serialization/encoding/Encoder;", "value", "model-gec"}) public static final class $serializer implements GeneratedSerializer<Example> {
+/* 75 */       @NotNull public static final $serializer INSTANCE = new $serializer(); @NotNull public KSerializer<?>[] typeParametersSerializers() { return (KSerializer<?>[])GeneratedSerializer.DefaultImpls.typeParametersSerializers(this); } @NotNull public SerialDescriptor getDescriptor() { return (SerialDescriptor)descriptor; } @NotNull public KSerializer<?>[] childSerializers() { KSerializer[] arrayOfKSerializer1 = (KSerializer[])Setting.Rule.Example.$childSerializers, arrayOfKSerializer2 = new KSerializer[2]; arrayOfKSerializer2[0] = (KSerializer)StringSerializer.INSTANCE; arrayOfKSerializer2[1] = arrayOfKSerializer1[1]; return (KSerializer<?>[])arrayOfKSerializer2; } @NotNull public Setting.Rule.Example deserialize(@NotNull Decoder decoder) { Intrinsics.checkNotNullParameter(decoder, "decoder"); SerialDescriptor serialDescriptor = getDescriptor(); boolean bool = true; int i = 0; String str = null, arrayOfString[] = null; CompositeDecoder compositeDecoder = decoder.beginStructure(serialDescriptor); KSerializer[] arrayOfKSerializer = (KSerializer[])Setting.Rule.Example.$childSerializers; if (compositeDecoder.decodeSequentially()) { str = compositeDecoder.decodeStringElement(serialDescriptor, 0); i |= 0x1; arrayOfString = (String[])compositeDecoder.decodeSerializableElement(serialDescriptor, 1, (DeserializationStrategy)arrayOfKSerializer[1], arrayOfString); i |= 0x2; } else { while (bool) { int j = compositeDecoder.decodeElementIndex(serialDescriptor); switch (j) { case -1: bool = false; continue;case 0: str = compositeDecoder.decodeStringElement(serialDescriptor, 0); i |= 0x1; continue;case 1: arrayOfString = (String[])compositeDecoder.decodeSerializableElement(serialDescriptor, 1, (DeserializationStrategy)arrayOfKSerializer[1], arrayOfString); i |= 0x2; continue; }  throw new UnknownFieldException(j); }  }  compositeDecoder.endStructure(serialDescriptor); return new Setting.Rule.Example(i, str, arrayOfString, null); } public void serialize(@NotNull Encoder encoder, @NotNull Setting.Rule.Example value) { Intrinsics.checkNotNullParameter(encoder, "encoder"); Intrinsics.checkNotNullParameter(value, "value"); SerialDescriptor serialDescriptor = getDescriptor(); CompositeEncoder compositeEncoder = encoder.beginStructure(serialDescriptor); Setting.Rule.Example.write$Self$model_gec(value, compositeEncoder, serialDescriptor); compositeEncoder.endStructure(serialDescriptor); } static { PluginGeneratedSerialDescriptor pluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("ai.grazie.gec.model.settings.Setting.Rule.Example", INSTANCE, 2); pluginGeneratedSerialDescriptor.addElement("text", false); pluginGeneratedSerialDescriptor.addElement("corrected", false); descriptor = pluginGeneratedSerialDescriptor; } } public boolean equals(@Nullable Object other) { if (this == other) return true; 
+/* 76 */       if (!(other instanceof Example)) return false;
+/*    */       
+/* 78 */       if (!Intrinsics.areEqual(this.text, ((Example)other).text)) return false; 
+/* 79 */       return Arrays.equals((Object[])this.corrected, (Object[])((Example)other).corrected); }
+/*    */     @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\026\n\002\030\002\n\002\020\000\n\002\b\002\n\002\030\002\n\002\030\002\n\000\b\003\030\0002\0020\001B\007\b\002¢\006\002\020\002J\017\020\003\032\b\022\004\022\0020\0050\004HÆ\001¨\006\006"}, d2 = {"Lai/grazie/gec/model/settings/Setting$Rule$Example$Companion;", "", "()V", "serializer", "Lkotlinx/serialization/KSerializer;", "Lai/grazie/gec/model/settings/Setting$Rule$Example;", "model-gec"})
+/*    */     public static final class Companion {
+/*    */       private Companion() {} @NotNull
+/* 83 */       public final KSerializer<Setting.Rule.Example> serializer() { return (KSerializer<Setting.Rule.Example>)Setting.Rule.Example.$serializer.INSTANCE; } } public int hashCode() { int result = this.text.hashCode();
+/* 84 */       result = 31 * result + Arrays.hashCode((Object[])this.corrected);
+/* 85 */       return result; }
+/*    */ 
+/*    */     
+/*    */     @NotNull
+/*    */     public final String component1() {
+/*    */       return this.text;
+/*    */     }
+/*    */     
+/*    */     @NotNull
+/*    */     public final String[] component2() {
+/*    */       return this.corrected;
+/*    */     }
+/*    */     
+/*    */     @NotNull
+/*    */     public final Example copy(@NotNull String text, @NotNull String[] corrected) {
+/*    */       Intrinsics.checkNotNullParameter(text, "text");
+/*    */       Intrinsics.checkNotNullParameter(corrected, "corrected");
+/*    */       return new Example(text, corrected);
+/*    */     }
+/*    */     
+/*    */     @NotNull
+/*    */     public String toString() {
+/*    */       return "Example(text=" + this.text + ", corrected=" + Arrays.toString((Object[])this.corrected) + ")";
+/*    */     } }
+/*    */ 
+/*    */   
+/*    */   @Deprecated(message = "This synthesized declaration should not be used directly", replaceWith = @ReplaceWith(expression = "", imports = {}), level = DeprecationLevel.HIDDEN)
+/*    */   @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\0006\n\000\n\002\030\002\n\002\030\002\n\002\b\002\n\002\030\002\n\002\b\003\n\002\020\021\n\002\030\002\n\002\b\003\n\002\030\002\n\000\n\002\020\002\n\000\n\002\030\002\n\002\b\002\bÇ\002\030\0002\b\022\004\022\0020\0020\001B\007\b\002¢\006\002\020\003J\030\020\b\032\f\022\b\022\006\022\002\b\0030\n0\tHÖ\001¢\006\002\020\013J\021\020\f\032\0020\0022\006\020\r\032\0020\016HÖ\001J\031\020\017\032\0020\0202\006\020\021\032\0020\0222\006\020\023\032\0020\002HÖ\001R\024\020\004\032\0020\0058VXÖ\005¢\006\006\032\004\b\006\020\007¨\006\024"}, d2 = {"ai/grazie/gec/model/settings/Setting.Rule.Example.$serializer", "Lkotlinx/serialization/internal/GeneratedSerializer;", "Lai/grazie/gec/model/settings/Setting$Rule$Example;", "()V", "descriptor", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "getDescriptor", "()Lkotlinx/serialization/descriptors/SerialDescriptor;", "childSerializers", "", "Lkotlinx/serialization/KSerializer;", "()[Lkotlinx/serialization/KSerializer;", "deserialize", "decoder", "Lkotlinx/serialization/encoding/Decoder;", "serialize", "", "encoder", "Lkotlinx/serialization/encoding/Encoder;", "value", "model-gec"})
+/*    */   public static final class $serializer implements GeneratedSerializer<Example> {
+/*    */     @NotNull
+/*    */     public static final $serializer INSTANCE = new $serializer();
+/*    */     
+/*    */     @NotNull
+/*    */     public KSerializer<?>[] typeParametersSerializers() {
+/*    */       return (KSerializer<?>[])GeneratedSerializer.DefaultImpls.typeParametersSerializers(this);
+/*    */     }
+/*    */     
+/*    */     @NotNull
+/*    */     public SerialDescriptor getDescriptor() {
+/*    */       return (SerialDescriptor)descriptor;
+/*    */     }
+/*    */     
+/*    */     @NotNull
+/*    */     public KSerializer<?>[] childSerializers() {
+/*    */       KSerializer[] arrayOfKSerializer1 = (KSerializer[])Setting.Rule.Example.$childSerializers, arrayOfKSerializer2 = new KSerializer[2];
+/*    */       arrayOfKSerializer2[0] = (KSerializer)StringSerializer.INSTANCE;
+/*    */       arrayOfKSerializer2[1] = arrayOfKSerializer1[1];
+/*    */       return (KSerializer<?>[])arrayOfKSerializer2;
+/*    */     }
+/*    */     
+/*    */     @NotNull
+/*    */     public Setting.Rule.Example deserialize(@NotNull Decoder decoder) {
+/*    */       Intrinsics.checkNotNullParameter(decoder, "decoder");
+/*    */       SerialDescriptor serialDescriptor = getDescriptor();
+/*    */       boolean bool = true;
+/*    */       int i = 0;
+/*    */       String str = null, arrayOfString[] = null;
+/*    */       CompositeDecoder compositeDecoder = decoder.beginStructure(serialDescriptor);
+/*    */       KSerializer[] arrayOfKSerializer = (KSerializer[])Setting.Rule.Example.$childSerializers;
+/*    */       if (compositeDecoder.decodeSequentially()) {
+/*    */         str = compositeDecoder.decodeStringElement(serialDescriptor, 0);
+/*    */         i |= 0x1;
+/*    */         arrayOfString = (String[])compositeDecoder.decodeSerializableElement(serialDescriptor, 1, (DeserializationStrategy)arrayOfKSerializer[1], arrayOfString);
+/*    */         i |= 0x2;
+/*    */       } else {
+/*    */         while (bool) {
+/*    */           int j = compositeDecoder.decodeElementIndex(serialDescriptor);
+/*    */           switch (j) {
+/*    */             case -1:
+/*    */               bool = false;
+/*    */               continue;
+/*    */             case 0:
+/*    */               str = compositeDecoder.decodeStringElement(serialDescriptor, 0);
+/*    */               i |= 0x1;
+/*    */               continue;
+/*    */             case 1:
+/*    */               arrayOfString = (String[])compositeDecoder.decodeSerializableElement(serialDescriptor, 1, (DeserializationStrategy)arrayOfKSerializer[1], arrayOfString);
+/*    */               i |= 0x2;
+/*    */               continue;
+/*    */           } 
+/*    */           throw new UnknownFieldException(j);
+/*    */         } 
+/*    */       } 
+/*    */       compositeDecoder.endStructure(serialDescriptor);
+/*    */       return new Setting.Rule.Example(i, str, arrayOfString, null);
+/*    */     }
+/*    */     
+/*    */     public void serialize(@NotNull Encoder encoder, @NotNull Setting.Rule.Example value) {
+/*    */       Intrinsics.checkNotNullParameter(encoder, "encoder");
+/*    */       Intrinsics.checkNotNullParameter(value, "value");
+/*    */       SerialDescriptor serialDescriptor = getDescriptor();
+/*    */       CompositeEncoder compositeEncoder = encoder.beginStructure(serialDescriptor);
+/*    */       Setting.Rule.Example.write$Self$model_gec(value, compositeEncoder, serialDescriptor);
+/*    */       compositeEncoder.endStructure(serialDescriptor);
+/*    */     }
+/*    */     
+/*    */     static {
+/*    */       PluginGeneratedSerialDescriptor pluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("ai.grazie.gec.model.settings.Setting.Rule.Example", INSTANCE, 2);
+/*    */       pluginGeneratedSerialDescriptor.addElement("text", false);
+/*    */       pluginGeneratedSerialDescriptor.addElement("corrected", false);
+/*    */       descriptor = pluginGeneratedSerialDescriptor;
+/*    */     }
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\model-gec-jvm-0.4.32.jar!\ai\grazie\gec\model\settings\Setting$Rule.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

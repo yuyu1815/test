@@ -1,0 +1,27 @@
+/*    */ package ai.grazie.model.llm.chat.response;
+/*    */ 
+/*    */ import kotlinx.serialization.KSerializer;
+/*    */ import kotlinx.serialization.descriptors.SerialDescriptor;
+/*    */ import org.jetbrains.annotations.NotNull;
+/*    */ 
+/*    */ @SerialName("text")
+/*    */ @Serializable
+/*    */ @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000.\n\002\030\002\n\002\030\002\n\000\n\002\020\b\n\000\n\002\030\002\n\002\b\003\n\002\020\002\n\002\b\002\n\002\030\002\n\000\n\002\030\002\n\002\b\004\b\007\030\000 \0212\0020\001:\002\020\021B\031\b\021\022\006\020\002\032\0020\003\022\b\020\004\032\004\030\0010\005¢\006\002\020\006B\005¢\006\002\020\007J&\020\b\032\0020\t2\006\020\n\032\0020\0002\006\020\013\032\0020\f2\006\020\r\032\0020\016HÁ\001¢\006\002\b\017¨\006\022"}, d2 = {"Lai/grazie/model/llm/chat/response/LLMResponseFormat$Text;", "Lai/grazie/model/llm/chat/response/LLMResponseFormat;", "seen1", "", "serializationConstructorMarker", "Lkotlinx/serialization/internal/SerializationConstructorMarker;", "(ILkotlinx/serialization/internal/SerializationConstructorMarker;)V", "()V", "write$Self", "", "self", "output", "Lkotlinx/serialization/encoding/CompositeEncoder;", "serialDesc", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "write$Self$model_llm", "$serializer", "Companion", "model-llm"})
+/*    */ public final class Text extends LLMResponseFormat {
+/*    */   @NotNull
+/*    */   public static final Companion Companion = new Companion(null);
+/*    */   
+/*    */   @Deprecated(message = "This synthesized declaration should not be used directly", replaceWith = @ReplaceWith(expression = "", imports = {}), level = DeprecationLevel.HIDDEN)
+/*    */   @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\0006\n\000\n\002\030\002\n\002\030\002\n\002\b\002\n\002\030\002\n\002\b\003\n\002\020\021\n\002\030\002\n\002\b\003\n\002\030\002\n\000\n\002\020\002\n\000\n\002\030\002\n\002\b\002\bÇ\002\030\0002\b\022\004\022\0020\0020\001B\007\b\002¢\006\002\020\003J\030\020\b\032\f\022\b\022\006\022\002\b\0030\n0\tHÖ\001¢\006\002\020\013J\021\020\f\032\0020\0022\006\020\r\032\0020\016HÖ\001J\031\020\017\032\0020\0202\006\020\021\032\0020\0222\006\020\023\032\0020\002HÖ\001R\024\020\004\032\0020\0058VXÖ\005¢\006\006\032\004\b\006\020\007¨\006\024"}, d2 = {"ai/grazie/model/llm/chat/response/LLMResponseFormat.Text.$serializer", "Lkotlinx/serialization/internal/GeneratedSerializer;", "Lai/grazie/model/llm/chat/response/LLMResponseFormat$Text;", "()V", "descriptor", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "getDescriptor", "()Lkotlinx/serialization/descriptors/SerialDescriptor;", "childSerializers", "", "Lkotlinx/serialization/KSerializer;", "()[Lkotlinx/serialization/KSerializer;", "deserialize", "decoder", "Lkotlinx/serialization/encoding/Decoder;", "serialize", "", "encoder", "Lkotlinx/serialization/encoding/Encoder;", "value", "model-llm"})
+/*    */   public static final class $serializer implements GeneratedSerializer<Text> { @NotNull
+/* 17 */     public static final $serializer INSTANCE = new $serializer(); @NotNull public KSerializer<?>[] typeParametersSerializers() { return (KSerializer<?>[])GeneratedSerializer.DefaultImpls.typeParametersSerializers(this); } @NotNull public SerialDescriptor getDescriptor() { return (SerialDescriptor)descriptor; } @NotNull public KSerializer<?>[] childSerializers() { return (KSerializer<?>[])new KSerializer[0]; } @NotNull public LLMResponseFormat.Text deserialize(@NotNull Decoder decoder) { Intrinsics.checkNotNullParameter(decoder, "decoder"); SerialDescriptor serialDescriptor = getDescriptor(); boolean bool1 = true, bool2 = false; CompositeDecoder compositeDecoder = decoder.beginStructure(serialDescriptor); if (!compositeDecoder.decodeSequentially()) while (bool1) { int i = compositeDecoder.decodeElementIndex(serialDescriptor); if (i == -1) { bool1 = false; continue; }  throw new UnknownFieldException(i); }   compositeDecoder.endStructure(serialDescriptor); return new LLMResponseFormat.Text(bool2, null); } public void serialize(@NotNull Encoder encoder, @NotNull LLMResponseFormat.Text value) { Intrinsics.checkNotNullParameter(encoder, "encoder"); Intrinsics.checkNotNullParameter(value, "value"); SerialDescriptor serialDescriptor = getDescriptor(); CompositeEncoder compositeEncoder = encoder.beginStructure(serialDescriptor); LLMResponseFormat.Text.write$Self$model_llm(value, compositeEncoder, serialDescriptor); compositeEncoder.endStructure(serialDescriptor); } } @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\026\n\002\030\002\n\002\020\000\n\002\b\002\n\002\030\002\n\002\030\002\n\000\b\003\030\0002\0020\001B\007\b\002¢\006\002\020\002J\017\020\003\032\b\022\004\022\0020\0050\004HÆ\001¨\006\006"}, d2 = {"Lai/grazie/model/llm/chat/response/LLMResponseFormat$Text$Companion;", "", "()V", "serializer", "Lkotlinx/serialization/KSerializer;", "Lai/grazie/model/llm/chat/response/LLMResponseFormat$Text;", "model-llm"}) public static final class Companion { private Companion() {} @NotNull public final KSerializer<LLMResponseFormat.Text> serializer() { return (KSerializer<LLMResponseFormat.Text>)LLMResponseFormat.Text.$serializer.INSTANCE; }
+/*    */      } public Text() {
+/* 19 */     super(null);
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\model-llm-jvm-0.4.32.jar!\ai\grazie\model\llm\chat\response\LLMResponseFormat$Text.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

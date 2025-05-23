@@ -1,0 +1,27 @@
+/*    */ package com.intellij.ml.llm.matterhorn.llm;@Serializable @Metadata(mv = {2, 1, 0}, k = 1, xi = 48, d1 = {"\000D\n\002\030\002\n\002\020\000\n\000\n\002\020\006\n\002\b\004\n\002\020\b\n\000\n\002\030\002\n\000\n\002\020\013\n\002\b\004\n\002\030\002\n\002\b\016\n\002\020\002\n\002\b\002\n\002\030\002\n\000\n\002\030\002\n\002\b\004\b\007\030\000 (2\0020\001:\002'(BQ\022\b\b\002\020\002\032\0020\003\022\b\b\002\020\004\032\0020\003\022\b\b\002\020\005\032\0020\003\022\b\b\002\020\006\032\0020\003\022\n\b\002\020\007\032\004\030\0010\b\022\n\b\002\020\t\032\004\030\0010\n\022\b\b\002\020\013\032\0020\f¢\006\004\b\r\020\016BW\b\020\022\006\020\017\032\0020\b\022\006\020\002\032\0020\003\022\006\020\004\032\0020\003\022\006\020\005\032\0020\003\022\006\020\006\032\0020\003\022\b\020\007\032\004\030\0010\b\022\b\020\t\032\004\030\0010\n\022\006\020\013\032\0020\f\022\b\020\020\032\004\030\0010\021¢\006\004\b\r\020\022J%\020\037\032\0020 2\006\020!\032\0020\0002\006\020\"\032\0020#2\006\020$\032\0020%H\001¢\006\002\b&R\021\020\002\032\0020\003¢\006\b\n\000\032\004\b\023\020\024R\021\020\004\032\0020\003¢\006\b\n\000\032\004\b\025\020\024R\021\020\005\032\0020\003¢\006\b\n\000\032\004\b\026\020\024R\021\020\006\032\0020\003¢\006\b\n\000\032\004\b\027\020\024R\025\020\007\032\004\030\0010\b¢\006\n\n\002\020\032\032\004\b\030\020\031R\023\020\t\032\004\030\0010\n¢\006\b\n\000\032\004\b\033\020\034R\021\020\013\032\0020\f¢\006\b\n\000\032\004\b\035\020\036¨\006)"}, d2 = {"Lcom/intellij/ml/llm/matterhorn/llm/ModelCapabilities;", "", "inputPrice", "", "outputPrice", "cacheInputPrice", "cacheCreateInputPrice", "maxOutputTokens", "", "vision", "Lcom/intellij/ml/llm/matterhorn/llm/LLMVision;", "supportsAssistantMessageResuming", "", "<init>", "(DDDDLjava/lang/Integer;Lcom/intellij/ml/llm/matterhorn/llm/LLMVision;Z)V", "seen0", "serializationConstructorMarker", "Lkotlinx/serialization/internal/SerializationConstructorMarker;", "(IDDDDLjava/lang/Integer;Lcom/intellij/ml/llm/matterhorn/llm/LLMVision;ZLkotlinx/serialization/internal/SerializationConstructorMarker;)V", "getInputPrice", "()D", "getOutputPrice", "getCacheInputPrice", "getCacheCreateInputPrice", "getMaxOutputTokens", "()Ljava/lang/Integer;", "Ljava/lang/Integer;", "getVision", "()Lcom/intellij/ml/llm/matterhorn/llm/LLMVision;", "getSupportsAssistantMessageResuming", "()Z", "write$Self", "", "self", "output", "Lkotlinx/serialization/encoding/CompositeEncoder;", "serialDesc", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "write$Self$core", "$serializer", "Companion", "core"}) public final class ModelCapabilities { @NotNull public static final Companion Companion = new Companion(null); private final double inputPrice; private final double outputPrice; private final double cacheInputPrice; private final double cacheCreateInputPrice; @Nullable
+/*    */   private final Integer maxOutputTokens; @Nullable
+/*    */   private final LLMVision vision; private final boolean supportsAssistantMessageResuming; @Metadata(mv = {2, 1, 0}, k = 1, xi = 48, d1 = {"\000\026\n\002\030\002\n\002\020\000\n\002\b\003\n\002\030\002\n\002\030\002\n\000\b\003\030\0002\0020\001B\t\b\002¢\006\004\b\002\020\003J\f\020\004\032\b\022\004\022\0020\0060\005¨\006\007"}, d2 = {"Lcom/intellij/ml/llm/matterhorn/llm/ModelCapabilities$Companion;", "", "<init>", "()V", "serializer", "Lkotlinx/serialization/KSerializer;", "Lcom/intellij/ml/llm/matterhorn/llm/ModelCapabilities;", "core"})
+/*    */   public static final class Companion { @NotNull
+/*  5 */     public final KSerializer<ModelCapabilities> serializer() { return (KSerializer<ModelCapabilities>)ModelCapabilities.$serializer.INSTANCE; }
+/*    */      private Companion() {} } public ModelCapabilities(double inputPrice, double outputPrice, double cacheInputPrice, double cacheCreateInputPrice, @Nullable Integer maxOutputTokens, @Nullable LLMVision vision, boolean supportsAssistantMessageResuming) {
+/*  7 */     this.inputPrice = inputPrice;
+/*  8 */     this.outputPrice = outputPrice;
+/*  9 */     this.cacheInputPrice = cacheInputPrice;
+/* 10 */     this.cacheCreateInputPrice = cacheCreateInputPrice;
+/*    */ 
+/*    */     
+/* 13 */     this.maxOutputTokens = maxOutputTokens;
+/* 14 */     this.vision = vision;
+/*    */     
+/* 16 */     this.supportsAssistantMessageResuming = supportsAssistantMessageResuming; } public final double getInputPrice() { return this.inputPrice; } public final double getOutputPrice() { return this.outputPrice; } public final double getCacheInputPrice() { return this.cacheInputPrice; } public final double getCacheCreateInputPrice() { return this.cacheCreateInputPrice; } @Nullable public final Integer getMaxOutputTokens() { return this.maxOutputTokens; } @Nullable public final LLMVision getVision() { return this.vision; } public final boolean getSupportsAssistantMessageResuming() { return this.supportsAssistantMessageResuming; }
+/*    */ 
+/*    */   
+/*    */   public ModelCapabilities() {
+/*    */     this(0.0D, 0.0D, 0.0D, 0.0D, (Integer)null, (LLMVision)null, false, 127, (DefaultConstructorMarker)null);
+/*    */   } }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\ej-243.132.63.jar!\com\intellij\ml\llm\matterhorn\llm\ModelCapabilities.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

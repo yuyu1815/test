@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Created-By: Maven Source Plugin 3.2.1
+Implementation-Title: Jakarta XML Binding API
+Implementation-Version: 2.3.3
+Implementation-Vendor: Eclipse Foundation
+Implementation-Build-Id: 2.3.3 - 2.3.3-RELEASE-fd06b2b
+

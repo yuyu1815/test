@@ -1,0 +1,16 @@
+/*   */ package com.intellij.ml.llm.matterhorn.core.llm.anthropic;
+/*   */ import kotlinx.serialization.KSerializer;
+/*   */ 
+/*   */ @Metadata(mv = {2, 1, 0}, k = 1, xi = 48, d1 = {"\000\026\n\002\030\002\n\002\020\000\n\002\b\003\n\002\030\002\n\002\030\002\n\000\b\003\030\0002\0020\001B\t\b\002¢\006\004\b\002\020\003J\f\020\004\032\b\022\004\022\0020\0060\005¨\006\007"}, d2 = {"Lcom/intellij/ml/llm/matterhorn/core/llm/anthropic/AnthropicStreamingEvent$Companion;", "", "<init>", "()V", "serializer", "Lkotlinx/serialization/KSerializer;", "Lcom/intellij/ml/llm/matterhorn/core/llm/anthropic/AnthropicStreamingEvent;", "core-llm"})
+/*   */ public final class Companion {
+/*   */   @NotNull
+/*   */   public final KSerializer<AnthropicStreamingEvent> serializer() {
+/* 8 */     KClass[] arrayOfKClass = new KClass[8]; arrayOfKClass[0] = Reflection.getOrCreateKotlinClass(AnthropicStreamingEvent.ContentBlockDelta.class); arrayOfKClass[1] = Reflection.getOrCreateKotlinClass(AnthropicStreamingEvent.ContentBlockStart.class); arrayOfKClass[2] = Reflection.getOrCreateKotlinClass(AnthropicStreamingEvent.ContentBlockStop.class); arrayOfKClass[3] = Reflection.getOrCreateKotlinClass(AnthropicStreamingEvent.Error.class); arrayOfKClass[4] = Reflection.getOrCreateKotlinClass(AnthropicStreamingEvent.MessageDelta.class); arrayOfKClass[5] = Reflection.getOrCreateKotlinClass(AnthropicStreamingEvent.MessageStart.class); arrayOfKClass[6] = Reflection.getOrCreateKotlinClass(AnthropicStreamingEvent.MessageStop.class); arrayOfKClass[7] = Reflection.getOrCreateKotlinClass(AnthropicStreamingEvent.Ping.class); KSerializer[] arrayOfKSerializer = new KSerializer[8]; arrayOfKSerializer[0] = (KSerializer)AnthropicStreamingEvent.ContentBlockDelta.$serializer.INSTANCE; arrayOfKSerializer[1] = (KSerializer)AnthropicStreamingEvent.ContentBlockStart.$serializer.INSTANCE; arrayOfKSerializer[2] = (KSerializer)AnthropicStreamingEvent.ContentBlockStop.$serializer.INSTANCE; arrayOfKSerializer[3] = (KSerializer)AnthropicStreamingEvent.Error.$serializer.INSTANCE; arrayOfKSerializer[4] = (KSerializer)AnthropicStreamingEvent.MessageDelta.$serializer.INSTANCE; arrayOfKSerializer[5] = (KSerializer)AnthropicStreamingEvent.MessageStart.$serializer.INSTANCE; arrayOfKSerializer[6] = (KSerializer)new ObjectSerializer("message_stop", AnthropicStreamingEvent.MessageStop.INSTANCE, new java.lang.annotation.Annotation[0]); arrayOfKSerializer[7] = (KSerializer)new ObjectSerializer("ping", AnthropicStreamingEvent.Ping.INSTANCE, new java.lang.annotation.Annotation[0]); return (KSerializer<AnthropicStreamingEvent>)new SealedClassSerializer("com.intellij.ml.llm.matterhorn.core.llm.anthropic.AnthropicStreamingEvent", Reflection.getOrCreateKotlinClass(AnthropicStreamingEvent.class), arrayOfKClass, arrayOfKSerializer, new java.lang.annotation.Annotation[0]);
+/*   */   }
+/*   */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\core-llm.jar!\com\intellij\ml\llm\matterhorn\core\llm\anthropic\AnthropicStreamingEvent$Companion.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

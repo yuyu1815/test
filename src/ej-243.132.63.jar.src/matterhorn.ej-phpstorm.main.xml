@@ -1,0 +1,27 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.phpstorm">
+  <dependencies>
+    <plugin id="com.jetbrains.php"/>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <ejSupportProvider implementation="com.intellij.ml.llm.matterhorn.ej.phpstorm.PhpStormElectricJuniorSupportProvider" />
+    <matterhornStarter
+      key="ElectricJuniorPhpStorm"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.phpstorm.PhpStormAgentMatterhornStarter"
+    />
+    <matterhornStarter
+      key="ElectricJuniorPhpStormChecker"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.phpstorm.PhpStormProjectCheckMatterhornStarter"/>
+
+    <relevance.extractors.ejElementProvider
+      filetype="PHP"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.phpstorm.relevance.extractors.PhpElementProvider"/>
+
+    <projectUpdateTrigger implementation="com.intellij.ml.llm.matterhorn.ej.phpstorm.PhpComposerProjectUpdateTrigger" />
+  </extensions>
+</idea-plugin>

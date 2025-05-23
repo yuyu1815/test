@@ -1,0 +1,45 @@
+/*    */ package ai.grazie.model.task.data;@Serializable
+/*    */ @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000D\n\002\030\002\n\002\030\002\n\000\n\002\020\b\n\000\n\002\020\016\n\002\b\002\n\002\030\002\n\002\b\t\n\002\020\013\n\000\n\002\020\000\n\002\b\003\n\002\020\002\n\002\b\002\n\002\030\002\n\000\n\002\030\002\n\002\b\004\b\b\030\000  2\0020\001:\002\037 B-\b\021\022\006\020\002\032\0020\003\022\b\020\004\032\004\030\0010\005\022\b\020\006\032\004\030\0010\005\022\b\020\007\032\004\030\0010\b¢\006\002\020\tB\031\022\n\b\002\020\004\032\004\030\0010\005\022\006\020\006\032\0020\005¢\006\002\020\nJ\013\020\016\032\004\030\0010\005HÆ\003J\t\020\017\032\0020\005HÆ\003J\037\020\020\032\0020\0002\n\b\002\020\004\032\004\030\0010\0052\b\b\002\020\006\032\0020\005HÆ\001J\023\020\021\032\0020\0222\b\020\023\032\004\030\0010\024HÖ\003J\t\020\025\032\0020\003HÖ\001J\t\020\026\032\0020\005HÖ\001J&\020\027\032\0020\0302\006\020\031\032\0020\0002\006\020\032\032\0020\0332\006\020\034\032\0020\035HÁ\001¢\006\002\b\036R\024\020\006\032\0020\005X\004¢\006\b\n\000\032\004\b\013\020\fR\023\020\004\032\004\030\0010\005¢\006\b\n\000\032\004\b\r\020\f¨\006!"}, d2 = {"Lai/grazie/model/task/data/TaskStreamFunctionCall;", "Lai/grazie/model/task/data/TaskStreamData;", "seen1", "", "name", "", "content", "serializationConstructorMarker", "Lkotlinx/serialization/internal/SerializationConstructorMarker;", "(ILjava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V", "(Ljava/lang/String;Ljava/lang/String;)V", "getContent", "()Ljava/lang/String;", "getName", "component1", "component2", "copy", "equals", "", "other", "", "hashCode", "toString", "write$Self", "", "self", "output", "Lkotlinx/serialization/encoding/CompositeEncoder;", "serialDesc", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "write$Self$model_task", "$serializer", "Companion", "model-task"})
+/*    */ public final class TaskStreamFunctionCall extends TaskStreamData { @NotNull
+/*    */   public static final Companion Companion = new Companion(null); @Nullable
+/*    */   private final String name; @NotNull
+/*    */   private final String content; public boolean equals(@Nullable Object other) {
+/*    */     if (this == other)
+/*    */       return true; 
+/*    */     if (!(other instanceof TaskStreamFunctionCall))
+/*    */       return false; 
+/*    */     TaskStreamFunctionCall taskStreamFunctionCall = (TaskStreamFunctionCall)other;
+/*    */     return !Intrinsics.areEqual(this.name, taskStreamFunctionCall.name) ? false : (!!Intrinsics.areEqual(this.content, taskStreamFunctionCall.content));
+/*    */   } public int hashCode() {
+/*    */     result = (this.name == null) ? 0 : this.name.hashCode();
+/*    */     return result * 31 + this.content.hashCode();
+/*    */   } @NotNull
+/*    */   public String toString() {
+/*    */     return "TaskStreamFunctionCall(name=" + this.name + ", content=" + this.content + ")";
+/*    */   }
+/*    */   @NotNull
+/*    */   public final TaskStreamFunctionCall copy(@Nullable String name, @NotNull String content) {
+/*    */     Intrinsics.checkNotNullParameter(content, "content");
+/*    */     return new TaskStreamFunctionCall(name, content);
+/*    */   }
+/*    */   @NotNull
+/*    */   public final String component2() {
+/*    */     return this.content;
+/*    */   }
+/*    */   @Nullable
+/*    */   public final String component1() {
+/*    */     return this.name;
+/*    */   }
+/*    */   @Deprecated(message = "This synthesized declaration should not be used directly", replaceWith = @ReplaceWith(expression = "", imports = {}), level = DeprecationLevel.HIDDEN)
+/*    */   @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\0006\n\000\n\002\030\002\n\002\030\002\n\002\b\002\n\002\030\002\n\002\b\003\n\002\020\021\n\002\030\002\n\002\b\003\n\002\030\002\n\000\n\002\020\002\n\000\n\002\030\002\n\002\b\002\bÇ\002\030\0002\b\022\004\022\0020\0020\001B\007\b\002¢\006\002\020\003J\030\020\b\032\f\022\b\022\006\022\002\b\0030\n0\tHÖ\001¢\006\002\020\013J\021\020\f\032\0020\0022\006\020\r\032\0020\016HÖ\001J\031\020\017\032\0020\0202\006\020\021\032\0020\0222\006\020\023\032\0020\002HÖ\001R\024\020\004\032\0020\0058VXÖ\005¢\006\006\032\004\b\006\020\007¨\006\024"}, d2 = {"ai/grazie/model/task/data/TaskStreamFunctionCall.$serializer", "Lkotlinx/serialization/internal/GeneratedSerializer;", "Lai/grazie/model/task/data/TaskStreamFunctionCall;", "()V", "descriptor", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "getDescriptor", "()Lkotlinx/serialization/descriptors/SerialDescriptor;", "childSerializers", "", "Lkotlinx/serialization/KSerializer;", "()[Lkotlinx/serialization/KSerializer;", "deserialize", "decoder", "Lkotlinx/serialization/encoding/Decoder;", "serialize", "", "encoder", "Lkotlinx/serialization/encoding/Encoder;", "value", "model-task"})
+/*    */   public static final class $serializer implements GeneratedSerializer<TaskStreamFunctionCall> { @NotNull
+/* 36 */     public static final $serializer INSTANCE = new $serializer(); @NotNull public KSerializer<?>[] typeParametersSerializers() { return (KSerializer<?>[])GeneratedSerializer.DefaultImpls.typeParametersSerializers(this); } @NotNull public SerialDescriptor getDescriptor() { return (SerialDescriptor)descriptor; } @NotNull public KSerializer<?>[] childSerializers() { KSerializer[] arrayOfKSerializer = new KSerializer[2]; arrayOfKSerializer[0] = BuiltinSerializersKt.getNullable((KSerializer)StringSerializer.INSTANCE); arrayOfKSerializer[1] = (KSerializer)StringSerializer.INSTANCE; return (KSerializer<?>[])arrayOfKSerializer; } @NotNull public TaskStreamFunctionCall deserialize(@NotNull Decoder decoder) { Intrinsics.checkNotNullParameter(decoder, "decoder"); SerialDescriptor serialDescriptor = getDescriptor(); boolean bool = true; int i = 0; String str1 = null, str2 = null; CompositeDecoder compositeDecoder = decoder.beginStructure(serialDescriptor); if (compositeDecoder.decodeSequentially()) { str1 = (String)compositeDecoder.decodeNullableSerializableElement(serialDescriptor, 0, (DeserializationStrategy)StringSerializer.INSTANCE, str1); i |= 0x1; str2 = compositeDecoder.decodeStringElement(serialDescriptor, 1); i |= 0x2; } else { while (bool) { int j = compositeDecoder.decodeElementIndex(serialDescriptor); switch (j) { case -1: bool = false; continue;case 0: str1 = (String)compositeDecoder.decodeNullableSerializableElement(serialDescriptor, 0, (DeserializationStrategy)StringSerializer.INSTANCE, str1); i |= 0x1; continue;case 1: str2 = compositeDecoder.decodeStringElement(serialDescriptor, 1); i |= 0x2; continue; }  throw new UnknownFieldException(j); }  }  compositeDecoder.endStructure(serialDescriptor); return new TaskStreamFunctionCall(i, str1, str2, null); } public void serialize(@NotNull Encoder encoder, @NotNull TaskStreamFunctionCall value) { Intrinsics.checkNotNullParameter(encoder, "encoder"); Intrinsics.checkNotNullParameter(value, "value"); SerialDescriptor serialDescriptor = getDescriptor(); CompositeEncoder compositeEncoder = encoder.beginStructure(serialDescriptor); TaskStreamFunctionCall.write$Self$model_task(value, compositeEncoder, serialDescriptor); compositeEncoder.endStructure(serialDescriptor); } static { PluginGeneratedSerialDescriptor pluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("ai.grazie.model.task.data.TaskStreamFunctionCall", INSTANCE, 2); pluginGeneratedSerialDescriptor.addElement("name", true); pluginGeneratedSerialDescriptor.addElement("content", false); descriptor = pluginGeneratedSerialDescriptor; } } @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\026\n\002\030\002\n\002\020\000\n\002\b\002\n\002\030\002\n\002\030\002\n\000\b\003\030\0002\0020\001B\007\b\002¢\006\002\020\002J\017\020\003\032\b\022\004\022\0020\0050\004HÆ\001¨\006\006"}, d2 = {"Lai/grazie/model/task/data/TaskStreamFunctionCall$Companion;", "", "()V", "serializer", "Lkotlinx/serialization/KSerializer;", "Lai/grazie/model/task/data/TaskStreamFunctionCall;", "model-task"}) public static final class Companion { private Companion() {} @NotNull public final KSerializer<TaskStreamFunctionCall> serializer() { return (KSerializer<TaskStreamFunctionCall>)TaskStreamFunctionCall.$serializer.INSTANCE; } }
+/*    */    @NotNull
+/* 38 */   public String getContent() { return this.content; } @Nullable public final String getName() { return this.name; } public TaskStreamFunctionCall(@Nullable String name, @NotNull String content) { super(null); this.name = name; this.content = content; }
+/*    */    }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\model-task-jvm-0.4.32.jar!\ai\grazie\model\task\data\TaskStreamFunctionCall.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

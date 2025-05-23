@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: norman
+Build-Jdk: 1.8.0_402
+Bundle-ManifestVersion: 2
+Bundle-Name: Netty/Incubator/Codec/Native/Quic
+Bundle-SymbolicName: io.netty.incubator.netty-incubator-codec-native-q
+ uic.source
+Bundle-Vendor: The Netty Project
+Bundle-Version: 
+Eclipse-SourceBundle: io.netty.incubator.netty-incubator-codec-native-
+ quic;version="${parsedVersion.osgiVersion}";roots:="."
+

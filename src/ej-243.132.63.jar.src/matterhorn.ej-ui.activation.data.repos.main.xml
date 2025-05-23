@@ -1,0 +1,47 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.activation.data.repos">
+  <dependencies>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-ui.activation.platform.main"/>
+    <module name="matterhorn.ej-ui.activation.data.model.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij">
+
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAieProvisionRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieNoProvisionRepositoryImpl"/>
+
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieRegionUrlRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieRegionUrlRepositoryImpl"/>
+
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieJbaUserRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieJbaUserRepositoryImpl"/>
+
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieIdeBuildInfoRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieIdeBuildInfoRepositoryImpl"/>
+
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieIdeLicenseRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieIdeLicenseRepositoryServiceImpl"/>
+
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAipLicenseAgreementRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAipLicenseAgreementRepositoryImpl"/>
+
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAipLicenseRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAipLicenseRepositoryImpl"/>
+
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAipLicensePreferencesRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAipLicensePreferencesRepositoryImpl"/>
+
+  </extensions>
+
+</idea-plugin>

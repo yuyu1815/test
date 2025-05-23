@@ -1,0 +1,15 @@
+$schema: 'https://json-schema.org/draft/2020-12/schema'
+properties:
+  context:
+    type: string
+    description: Text to complete.
+  profile:
+    type: string
+    enum: [ Always, Moderate ]
+    description: |-
+      Completion profile. Possible values:
+      * `Always` - try to complete always when it is possible;
+      * `Moderate` - try to complete only when pretty sure that completion is good.
+required:
+  - context
+  - profile

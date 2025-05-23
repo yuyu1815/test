@@ -1,0 +1,54 @@
+openapi: 3.1.0
+info:
+  title: code-complete-fast
+  description: Complete code at caret using LLM. This task currently supports only
+    the Alibaba completion model.
+  version: DEV
+  x-namespace: tasks.code.complete.llm.fast
+  x-task-name: code-complete-fast
+servers:
+- url: /
+components:
+  schemas:
+    ContextItem:
+      type: object
+      properties:
+        type:
+          type: string
+        filepath:
+          type: string
+        content:
+          type: string
+      required:
+      - content
+      - filepath
+      - type
+    CodeCompleteFastTaskParams:
+      type: object
+      properties:
+        prefix:
+          type: string
+          description: The source code before the caret.
+          minLength: 1
+        suffix:
+          type: string
+          description: The source code after the caret.
+          minLength: 1
+        filepath:
+          type: string
+          description: "The relative path of the file, where completion is requested,\
+            \ with filename and extension."
+          minLength: 1
+        context:
+          type: array
+          default: []
+          items:
+            $ref: "#/components/schemas/ContextItem"
+          x-field-extra-annotation: '@kotlinx.serialization.EncodeDefault'
+      required:
+      - context
+      - filepath
+      - prefix
+      - suffix
+      x-task-parameters: true
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema

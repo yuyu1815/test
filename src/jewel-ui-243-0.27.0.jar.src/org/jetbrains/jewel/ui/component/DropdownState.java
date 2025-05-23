@@ -1,0 +1,225 @@
+/*     */ package org.jetbrains.jewel.ui.component;
+/*     */ 
+/*     */ import androidx.compose.runtime.Composable;
+/*     */ import androidx.compose.runtime.Composer;
+/*     */ import androidx.compose.runtime.Immutable;
+/*     */ import kotlin.Metadata;
+/*     */ import kotlin.ULong;
+/*     */ import kotlin.jvm.JvmInline;
+/*     */ import kotlin.jvm.internal.DefaultConstructorMarker;
+/*     */ import org.jetbrains.annotations.NotNull;
+/*     */ import org.jetbrains.annotations.Nullable;
+/*     */ import org.jetbrains.jewel.foundation.state.CommonStateBitMask;
+/*     */ import org.jetbrains.jewel.foundation.state.FocusableComponentState;
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ @JvmInline
+/*     */ @Metadata(mv = {2, 0, 0}, k = 1, xi = 48, d1 = {"\0002\n\002\030\002\n\002\030\002\n\000\n\002\030\002\n\002\b\006\n\002\020\013\n\002\b\023\n\002\020\016\n\002\b\004\n\002\020\000\n\002\b\003\n\002\020\b\n\002\b\004\b@\030\000 *2\0020\001:\001*B\017\022\006\020\002\032\0020\003¢\006\004\b\004\020\005J?\020\025\032\0020\0002\b\b\002\020\026\032\0020\n2\b\b\002\020\027\032\0020\n2\b\b\002\020\030\032\0020\n2\b\b\002\020\031\032\0020\n2\b\b\002\020\032\032\0020\n¢\006\004\b\033\020\034J\017\020\035\032\0020\036H\026¢\006\004\b\037\020 J\032\020!\032\0020\n2\b\020\"\032\004\030\0010#HÖ\003¢\006\004\b$\020%J\020\020&\032\0020'HÖ\001¢\006\004\b(\020)R\023\020\002\032\0020\003¢\006\n\n\002\020\b\032\004\b\006\020\007R\024\020\t\032\0020\n8VX\004¢\006\006\032\004\b\013\020\fR\024\020\r\032\0020\n8VX\004¢\006\006\032\004\b\016\020\fR\024\020\017\032\0020\n8VX\004¢\006\006\032\004\b\020\020\fR\024\020\021\032\0020\n8VX\004¢\006\006\032\004\b\022\020\fR\024\020\023\032\0020\n8VX\004¢\006\006\032\004\b\024\020\f\001\002¨\006+"}, d2 = {"Lorg/jetbrains/jewel/ui/component/DropdownState;", "Lorg/jetbrains/jewel/foundation/state/FocusableComponentState;", "state", "Lkotlin/ULong;", "constructor-impl", "(J)J", "getState-s-VKNKU", "()J", "J", "isActive", "", "isActive-impl", "(J)Z", "isEnabled", "isEnabled-impl", "isFocused", "isFocused-impl", "isHovered", "isHovered-impl", "isPressed", "isPressed-impl", "copy", "enabled", "focused", "pressed", "hovered", "active", "copy-17HSnUM", "(JZZZZZ)J", "toString", "", "toString-impl", "(J)Ljava/lang/String;", "equals", "other", "", "equals-impl", "(JLjava/lang/Object;)Z", "hashCode", "", "hashCode-impl", "(J)I", "Companion", "ui"})
+/*     */ @Immutable
+/*     */ public final class DropdownState
+/*     */   implements FocusableComponentState
+/*     */ {
+/*     */   @NotNull
+/*     */   public static final Companion Companion = new Companion(null);
+/*     */   private final long state;
+/*     */   
+/*     */   @Composable
+/*     */   public static <T> T chooseValue-impl(long arg0, Object normal, Object disabled, Object focused, Object pressed, Object hovered, Object active, @Nullable Composer $composer, int $changed) {
+/* 171 */     return box-impl(arg0).chooseValue((T)normal, (T)disabled, (T)focused, (T)pressed, (T)hovered, (T)active, $composer, $changed); } @Composable public <T> T chooseValue(Object normal, Object disabled, Object focused, Object pressed, Object hovered, Object active, @Nullable Composer $composer, int $changed) { return (T)FocusableComponentState.DefaultImpls.chooseValue(this, normal, disabled, focused, pressed, hovered, active, $composer, $changed); }
+/*     */    public final long getState-s-VKNKU() {
+/* 173 */     return this.state;
+/*     */   }
+/* 175 */   public static boolean isActive-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getActive-s-VKNKU()) != 0L); } public boolean isActive() { return isActive-impl(this.state); }
+/*     */ 
+/*     */   
+/* 178 */   public static boolean isEnabled-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getEnabled-s-VKNKU()) != 0L); } public boolean isEnabled() { return isEnabled-impl(this.state); }
+/*     */ 
+/*     */   
+/* 181 */   public static boolean isFocused-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getFocused-s-VKNKU()) != 0L); } public boolean isFocused() { return isFocused-impl(this.state); }
+/*     */ 
+/*     */   
+/* 184 */   public static boolean isHovered-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getHovered-s-VKNKU()) != 0L); } public boolean isHovered() { return isHovered-impl(this.state); }
+/*     */ 
+/*     */   
+/* 187 */   public static boolean isPressed-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getPressed-s-VKNKU()) != 0L); } public boolean isPressed() { return isPressed-impl(this.state); }
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */   
+/*     */   public static final long copy-17HSnUM(long arg0, boolean enabled, boolean focused, boolean pressed, boolean hovered, boolean active) {
+/* 195 */     return Companion.of-17HSnUM(enabled, focused, pressed, hovered, active);
+/*     */   }
+/* 197 */   public static int hashCode-impl(long arg0) { return ULong.hashCode-impl(arg0); } public int hashCode() { return hashCode-impl(this.state); } @NotNull public String toString() { return toString-impl(this.state); }
+/* 198 */   public static boolean equals-impl(long arg0, Object other) { if (!(other instanceof DropdownState)) return false;  long l = ((DropdownState)other).unbox-impl(); return !(arg0 != l); } @NotNull public static String toString-impl(long arg0) { return box-impl(arg0).getClass().getSimpleName() + "(isEnabled=" + box-impl(arg0).getClass().getSimpleName() + ", isFocused=" + isEnabled-impl(arg0) + ", isHovered=" + isFocused-impl(arg0) + ", isPressed=" + 
+/* 199 */       isHovered-impl(arg0) + ", isActive=" + isPressed-impl(arg0) + ")"; }
+/*     */    public boolean equals(Object other) {
+/*     */     return equals-impl(this.state, other);
+/*     */   } public static long constructor-impl(long state) {
+/*     */     return state;
+/*     */   } public static final boolean equals-impl0(long p1, long p2) {
+/*     */     return ULong.equals-impl0(p1, p2);
+/*     */   }
+/*     */   @Metadata(mv = {2, 0, 0}, k = 1, xi = 48, d1 = {"\000\032\n\002\030\002\n\002\020\000\n\002\b\003\n\002\030\002\n\000\n\002\020\013\n\002\b\007\b\003\030\0002\0020\001B\t\b\002¢\006\004\b\002\020\003J?\020\004\032\0020\0052\b\b\002\020\006\032\0020\0072\b\b\002\020\b\032\0020\0072\b\b\002\020\t\032\0020\0072\b\b\002\020\n\032\0020\0072\b\b\002\020\013\032\0020\007¢\006\004\b\f\020\r¨\006\016"}, d2 = {"Lorg/jetbrains/jewel/ui/component/DropdownState$Companion;", "", "<init>", "()V", "of", "Lorg/jetbrains/jewel/ui/component/DropdownState;", "enabled", "", "focused", "pressed", "hovered", "active", "of-17HSnUM", "(ZZZZZ)J", "ui"})
+/*     */   public static final class Companion { public final long of-17HSnUM(boolean enabled, boolean focused, boolean pressed, boolean hovered, boolean active) {
+/* 209 */       return DropdownState.constructor-impl(
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */           
+/* 214 */           ULong.constructor-impl(ULong.constructor-impl(ULong.constructor-impl(ULong.constructor-impl((enabled ? CommonStateBitMask.INSTANCE.getEnabled-s-VKNKU() : 0L) | (focused ? CommonStateBitMask.INSTANCE.getFocused-s-VKNKU() : 0L)) | (hovered ? CommonStateBitMask.INSTANCE.getHovered-s-VKNKU() : 0L)) | (pressed ? CommonStateBitMask.INSTANCE.getPressed-s-VKNKU() : 0L)) | (active ? CommonStateBitMask.INSTANCE.getActive-s-VKNKU() : 0L)));
+/*     */     }
+/*     */     
+/*     */     private Companion() {} }
+/*     */ 
+/*     */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\jewel-ui-243-0.27.0.jar!\org\jetbrains\jewe\\ui\component\DropdownState.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

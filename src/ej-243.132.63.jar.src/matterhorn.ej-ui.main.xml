@@ -1,0 +1,145 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.ui">
+  <resource-bundle>messages.MatterhornBundle</resource-bundle>
+  <dependencies>
+    <plugin id="org.intellij.plugins.markdown"/>
+    <plugin id="com.intellij.modules.json"/>
+    <plugin id="Git4Idea"/>
+
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.core-llm.main"/>
+    <module name="matterhorn.ej-core.main"/>
+
+    <module name="matterhorn.ej-ui.activation.config.main"/>
+    <module name="matterhorn.ej-ui.activation.data.impl.grazie.main"/>
+    <module name="matterhorn.ej-ui.activation.data.model.main"/>
+    <module name="matterhorn.ej-ui.activation.data.repos.main"/>
+    <module name="matterhorn.ej-ui.activation.platform.main"/>
+    <module name="matterhorn.ej-ui.activation.state.manager.main"/>
+    <module name="matterhorn.ej-ui.activation.state.model.main"/>
+
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <groupConfigurable id="junie" parentId="tools"
+                       bundle="messages.MatterhornBundle"
+                       displayNameKey="junie.configurable.top.level.name"
+                       descriptionKey="junie.configurable.top.level.description"/>
+    <applicationConfigurable parentId="junie"
+                             instance="com.intellij.ml.llm.matterhorn.ej.ui.settings.JunieAllowlistSettingsConfigurable"
+                             key="junie.action.allowlist.configurable.name" bundle="messages.MatterhornBundle"/>
+    <projectConfigurable parentId="junie"
+                         instance="com.intellij.ml.llm.matterhorn.ej.ui.settings.JunieProjectConfigurable"
+                         key="junie.project.configurable.name" bundle="messages.MatterhornBundle" />
+    <notificationGroup displayType="BALLOON" id="matterhorn"/>
+    <postStartupActivity implementation="com.intellij.ml.llm.matterhorn.ej.ui.activation.JunieActivationTransmitter"/>
+  </extensions>
+
+  <extensionPoints>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.sensitiveFileDetector"
+                    interface="com.intellij.ml.llm.matterhorn.ej.core.actions.edit.SensitiveFileDetector"
+                    dynamic="true"/>
+  </extensionPoints>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <ml.llm.matterhorn.sensitiveFileDetector implementation="com.intellij.ml.llm.matterhorn.ej.ui.tasks.OutOfProjectFilesFileDetector" />
+    <notificationGroup id="Junie" displayType="BALLOON"/>
+    <toolWindow id="Matterhorn"
+                anchor="right"
+                factoryClass="com.intellij.ml.llm.matterhorn.ej.ui.MatterhornToolWindowFactory"
+                icon="AllIcons.Toolwindows.ToolWindowUIDesigner"
+                doNotActivateOnStart="false"/>
+    <toolWindow factoryClass="com.intellij.ml.llm.matterhorn.ej.ui.ElectroJuniorToolWindowFactory"
+                id="ElectroJunToolWindow"
+                anchor="right"
+                icon="/icons/toolwindowLogo.svg"
+    />
+    <toolWindow factoryClass="com.intellij.ml.llm.matterhorn.ej.ui.debug.DebugEventsToolWindowFactory"
+                id="DebugEventsToolWindowFactory"
+                anchor="bottom"
+                icon="/icons/toolwindowLogo.svg"
+    />
+    <projectService serviceImplementation="com.intellij.ml.llm.matterhorn.ej.ui.tasks.TaskServiceImpl"
+                    serviceInterface="com.intellij.ml.llm.matterhorn.ej.core.tasks.TaskService"/>
+    <postStartupActivity implementation="com.intellij.ml.llm.matterhorn.ej.ui.onboarding.JunieOnboarding"/>
+    <postStartupActivity implementation="com.intellij.ml.llm.matterhorn.ej.ui.DebugUIListenerActivity"/>
+    <postStartupActivity implementation="com.intellij.ml.llm.matterhorn.ej.ui.debug.DebugEventsActivity"/>
+
+    <history.activityPresentationProvider
+      implementation="com.intellij.ml.llm.matterhorn.ej.ui.EjActivityPresentationProvider"/>
+
+    <registryKey defaultValue="false" description="Artifact debugging tools for Junie/Kineto"
+                 key="matterhorn.artifact.debug.ui"/>
+    <registryKey defaultValue="false" description="Enabled Mocking pages to the activation UI"
+                 key="matterhorn.debug.mock.activation"/>
+    <registryKey defaultValue="true" description="Perplexity mode" key="com.intellij.junie.perplexity.enabled"/>
+
+    <statistics.counterUsagesCollector
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.ui.statistics.EJEventLogger"/>
+    <statistics.counterUsagesCollector
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.ui.statistics.EJPrivateEventLogger"/>
+    <statistics.counterUsagesCollector
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.ui.statistics.EJUiEventLogger"/>
+    <statistics.counterUsagesCollector
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.ui.statistics.EJUiPrivateEventLogger"/>
+    <statistics.counterUsagesCollector
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.ui.statistics.EJVcsStateLogger"/>
+
+    <errorHandler implementation="com.intellij.ml.llm.matterhorn.ej.ui.reporting.AbstractEJMessagePoolAutoReporter$MyITNReporter" order="first"/>
+    <applicationInitializedListener implementation="com.intellij.ml.llm.matterhorn.ej.ui.reporting.AbstractEJMessagePoolAutoReporter$MyAppListener"/>
+  </extensions>
+
+  <actions resource-bundle="messages.MatterhornBundle">
+    <action id="ResolveIssueAgentAction" class="com.intellij.ml.llm.matterhorn.ej.ui.ResolveIssueAgentAction">
+      <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+    </action>
+
+    <group id="com.intellij.ml.llm.matterhorn.actions.MatterhornActionGroup"
+           class="com.intellij.ml.llm.matterhorn.ej.ui.MatterhornActionGroup"
+           text="Matterhorn"
+           popup="true">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="WeighingNewGroup"/>
+      <separator/>
+      <reference ref="ResolveIssueAgentAction"/>
+    </group>
+
+    <group id="com.intellij.ml.llm.matterhorn.actions.MatterhornTreeActionGroup">
+      <!-- extension point for the tree -->
+    </group>
+
+    <group id="com.intellij.ml.llm.matterhorn.actions.MatterhornToolbarActionGroup">
+      <!-- extension point for the toolbar -->
+    </group>
+
+    <action id="ShowDebugSettingsAction"
+            class="com.intellij.ml.llm.matterhorn.ej.ui.ShowDebugSettingsAction"
+            internal="true"/>
+
+    <action id="ClearJunieUserAgreement"
+            class="com.intellij.ml.llm.matterhorn.ej.ui.actions.ClearAgreementsAction"
+            description="Clear Junie user agreements acceptance"
+            internal="true"/>
+
+    <action id="ShowJunieFeedbackDialogAction"
+            class="com.intellij.ml.llm.matterhorn.ej.ui.ShowJunieFeedbackDialogAction"
+            description="Feedback"
+            internal="true"/>
+
+    <action id="Relogin"
+            class="com.intellij.ml.llm.matterhorn.ej.ui.login.ReloginAction"
+            description="Junie debug relogin"
+            internal="true"/>
+
+  </actions>
+
+  <projectListeners>
+    <listener
+      class="com.intellij.ml.llm.matterhorn.ej.ui.activation.JunieActivationStateListenerImpl"
+      topic="com.intellij.ml.llm.activation.platform.JunieActivationStateListener"
+    />
+
+  </projectListeners>
+
+</idea-plugin>

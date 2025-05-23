@@ -1,0 +1,137 @@
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude" package="com.intellij.ml.llm.matterhorn.ej.plugin">
+  <idea-version since-build="243.23654" until-build="243.*" />
+  <version>243.132.63</version>
+  <id>org.jetbrains.junie</id>
+  <name>JetBrains Junie</name>
+  <category>Other Tools</category>
+  <vendor>JetBrains</vendor>
+  <description><![CDATA[<p>
+  JetBrains Junie is your coding agent by JetBrains designed to handle tasks autonomously or in collaboration with a developer. Developers can fully delegate routine tasks to Junie or partner with it on more complex ones.
+</p>
+
+<br/>
+
+<p>
+  <b>You think it, Junie helps make it happen</b>
+  <br>
+  <b>Try it in JetBrains IDEs and join our <a href="https://jb.gg/junie/web">Discord</a> to stay in touch</b>
+</p>
+
+<br/>
+
+<p>
+  What Junie can do for you
+</p>
+
+<h3>
+  Provide a seamless coding experience
+</h3>
+
+Getting started with the coding agent is simple. Install it in your IDE and begin with small tasks that fit seamlessly into your workflow – no dramatic changes required. This approach ensures that the new way of working is empowering, not disruptive.
+
+<h3>
+  Discover efficient solutions
+</h3>
+
+<p>
+  Junie understands the structure, logic, and relationships in your code. When you give it a task, it finds the right places to work, the right tools to use, and the best path forward
+</p>
+
+<h3>
+  Propose an execution plan
+</h3>
+
+<p>
+  Once Junie has explored the project, it will provide a cohesive plan for completing the task.
+</p>
+
+<h3>
+  Adjust to the task at hand
+</h3>
+
+<p>
+  Use code mode to execute tasks, with Junie writing and testing the code for you. Switch to ask mode to pose questions, collaborate on plans, and brainstorm features and improvements.
+</p>
+
+<h3>
+  Perform inspections you can rely on
+</h3>
+
+<p>
+  When Junie updates your code, it uses the power of your IDE to make sure every change meets your standards. With built-in syntax and semantic checks, your code stays clean, consistent, and production-ready.
+</p>
+
+<h3>
+  Run tests to keep your project state green
+</h3>
+
+<p>
+  Junie can run code and tests when needed, reducing warnings and compilation errors. After making changes, it verifies that everything runs smoothly, so you can stay focused on building, not debugging.
+</p>
+
+<h3>
+  Intelligent collaboration on complex tasks
+</h3>
+
+<p>
+  Focus on the big picture while Junie handles the routine work. Review, refine, and stay in control. Junie’s here to support you.
+</p>]]></description>
+  <change-notes><![CDATA[<h2>2xx.132.xx</h2>
+  <ul>
+    <li>Android Studio compatibility added (requires IDE version Narwhal 2025.1.1 Canary or newer)</li>
+    <li>Improved response times by migrating some operations to asynchronous processing</li>
+    <li>Better tracking of file changes during shell command execution</li>
+    <li>Title summarization added for reports in "Ask" mode</li>
+    <li>Implemented build script change detection system for improved IDE integration</li>
+  </ul>
+  <h2>2xx.105.40</h2>
+  <ul>
+    <li>Support for RubyMine (IDE 2025.1 only), PhpStorm, and RustRover</li>
+    <li>Support PowerShell 7</li>
+    <li>Junie's project directory can now be configured via settings</li>
+    <li>.aiignore to restrict Junie's access to specific files and directories</li>
+    <li>Flexible Brave mode: configurable allow‑list of commands with RegEx support</li>
+    <li>UI/UX fixes and polish</li>
+  </ul>]]></change-notes>
+  <dependencies>
+    <plugin id="Git4Idea" />
+    <plugin id="com.intellij.modules.json" />
+    <plugin id="com.intellij.modules.platform" />
+    <plugin id="org.intellij.plugins.markdown" />
+    <plugin id="org.jetbrains.plugins.terminal" />
+  </dependencies>
+  <xi:include href="/META-INF/compatibility.xml" />
+  <content>
+    <module name="matterhorn.core.main" />
+    <module name="matterhorn.core-llm.main" />
+    <module name="matterhorn.ej-core.main" />
+    <module name="matterhorn.matterhorn.main" />
+    <module name="matterhorn.ej-ui.main" />
+    <module name="matterhorn.ej-idea.ej-kotlin.main" />
+    <module name="matterhorn.ej-idea.ej-android.main" />
+    <module name="matterhorn.ej-idea.ej-maven.main" />
+    <module name="matterhorn.ej-idea.ej-gradle.main" />
+    <module name="matterhorn.ej-idea.ej-scala.main" />
+    <module name="matterhorn.ej-idea.main" />
+    <module name="matterhorn.ej-pycharm.main" />
+    <module name="matterhorn.ej-goland.main" />
+    <module name="matterhorn.ej-phpstorm.main" />
+    <module name="matterhorn.ej-rider.main" />
+    <module name="matterhorn.ej-clion.main" />
+    <module name="matterhorn.ej-webstorm.main" />
+    <module name="matterhorn.ej-rubymine.main" />
+    <module name="matterhorn.ej-rustrover.main" />
+    <module name="matterhorn.webstorm-common.main" />
+    <module name="matterhorn.ej-core-test.main" />
+    <module name="matterhorn.ej-ui.activation.config.main" />
+    <module name="matterhorn.ej-ui.activation.data.impl.enterprise.main" />
+    <module name="matterhorn.ej-ui.activation.data.impl.grazie.main" />
+    <module name="matterhorn.ej-ui.activation.data.model.main" />
+    <module name="matterhorn.ej-ui.activation.data.repos.main" />
+    <module name="matterhorn.ej-ui.activation.platform.main" />
+    <module name="matterhorn.ej-ui.activation.state.junie.impl.main" />
+    <module name="matterhorn.ej-ui.activation.state.interop.impl.main" />
+    <module name="matterhorn.ej-ui.activation.state.manager.main" />
+    <module name="matterhorn.ej-ui.activation.state.model.main" />
+  </content>
+</idea-plugin>

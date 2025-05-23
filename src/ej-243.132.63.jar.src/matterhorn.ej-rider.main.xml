@@ -1,0 +1,17 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.rider">
+  <dependencies>
+    <plugin id="com.intellij.modules.rider"/>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <ejSupportProvider implementation="com.intellij.ml.llm.matterhorn.ej.rider.RiderElectricJuniorSupportProvider" />
+      <matterhornStarter
+        key="Rider"
+        implementationClass="com.intellij.ml.llm.matterhorn.ej.rider.RiderAgentMatterhornStarter"/>
+  </extensions>
+</idea-plugin>

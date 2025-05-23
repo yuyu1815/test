@@ -1,0 +1,28 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.kotlin">
+
+  <dependencies>
+    <plugin id="org.jetbrains.kotlin"/>
+
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main"/>
+    <module name="matterhorn.ej-idea.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="org.jetbrains.kotlin">
+    <supportsKotlinPluginMode supportsK2="true"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <relevance.extractors.ejElementProvider
+      filetype="Kotlin"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.kotlin.KotlinElementProvider"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn.actions.tests">
+    <testRunActionLocationContributor implementation="com.intellij.ml.llm.matterhorn.ej.kotlin.actions.tests.KotlinTestRunActionLocationContributor" order="before Jvm"/>
+  </extensions>
+
+</idea-plugin>

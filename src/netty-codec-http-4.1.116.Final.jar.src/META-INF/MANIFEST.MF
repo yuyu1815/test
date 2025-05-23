@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: io.netty.netty-codec-http.source
+Bundle-Name: Netty/Codec/HTTP
+Bundle-Version: 4.1.116.Final
+Bundle-ManifestVersion: 2
+Bundle-Vendor: The Netty Project
+Eclipse-SourceBundle: io.netty.netty-codec-http;version="4.1.116.Final
+ ";roots:="."
+Created-By: Maven Source Plugin 3.2.0
+

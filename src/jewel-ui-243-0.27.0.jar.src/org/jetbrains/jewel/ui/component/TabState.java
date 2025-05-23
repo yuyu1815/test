@@ -1,0 +1,276 @@
+/*     */ package org.jetbrains.jewel.ui.component;
+/*     */ 
+/*     */ import androidx.compose.runtime.Immutable;
+/*     */ import kotlin.Metadata;
+/*     */ import kotlin.ULong;
+/*     */ import kotlin.jvm.JvmInline;
+/*     */ import kotlin.jvm.internal.DefaultConstructorMarker;
+/*     */ import org.jetbrains.annotations.NotNull;
+/*     */ import org.jetbrains.jewel.foundation.state.CommonStateBitMask;
+/*     */ import org.jetbrains.jewel.foundation.state.SelectableComponentState;
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ @JvmInline
+/*     */ @Metadata(mv = {2, 0, 0}, k = 1, xi = 48, d1 = {"\0002\n\002\030\002\n\002\030\002\n\000\n\002\030\002\n\002\b\006\n\002\020\013\n\002\b\023\n\002\020\016\n\002\b\004\n\002\020\000\n\002\b\003\n\002\020\b\n\002\b\004\b@\030\000 *2\0020\001:\001*B\017\022\006\020\002\032\0020\003¢\006\004\b\004\020\005J?\020\025\032\0020\0002\b\b\002\020\026\032\0020\n2\b\b\002\020\027\032\0020\n2\b\b\002\020\030\032\0020\n2\b\b\002\020\031\032\0020\n2\b\b\002\020\032\032\0020\n¢\006\004\b\033\020\034J\017\020\035\032\0020\036H\026¢\006\004\b\037\020 J\032\020!\032\0020\n2\b\020\"\032\004\030\0010#HÖ\003¢\006\004\b$\020%J\020\020&\032\0020'HÖ\001¢\006\004\b(\020)R\023\020\002\032\0020\003¢\006\n\n\002\020\b\032\004\b\006\020\007R\024\020\t\032\0020\n8VX\004¢\006\006\032\004\b\013\020\fR\024\020\r\032\0020\n8VX\004¢\006\006\032\004\b\016\020\fR\024\020\017\032\0020\n8VX\004¢\006\006\032\004\b\020\020\fR\024\020\021\032\0020\n8VX\004¢\006\006\032\004\b\022\020\fR\024\020\023\032\0020\n8VX\004¢\006\006\032\004\b\024\020\f\001\002¨\006+"}, d2 = {"Lorg/jetbrains/jewel/ui/component/TabState;", "Lorg/jetbrains/jewel/foundation/state/SelectableComponentState;", "state", "Lkotlin/ULong;", "constructor-impl", "(J)J", "getState-s-VKNKU", "()J", "J", "isActive", "", "isActive-impl", "(J)Z", "isSelected", "isSelected-impl", "isEnabled", "isEnabled-impl", "isHovered", "isHovered-impl", "isPressed", "isPressed-impl", "copy", "selected", "enabled", "pressed", "hovered", "active", "copy-59c8LF8", "(JZZZZZ)J", "toString", "", "toString-impl", "(J)Ljava/lang/String;", "equals", "other", "", "equals-impl", "(JLjava/lang/Object;)Z", "hashCode", "", "hashCode-impl", "(J)I", "Companion", "ui"})
+/*     */ @Immutable
+/*     */ public final class TabState
+/*     */   implements SelectableComponentState
+/*     */ {
+/*     */   @NotNull
+/*     */   public static final Companion Companion = new Companion(null);
+/*     */   private final long state;
+/*     */   
+/*     */   public final long getState-s-VKNKU() {
+/* 224 */     return this.state;
+/*     */   }
+/* 226 */   public static boolean isActive-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getActive-s-VKNKU()) != 0L); } public boolean isActive() { return isActive-impl(this.state); }
+/*     */ 
+/*     */   
+/* 229 */   public static boolean isSelected-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getSelected-s-VKNKU()) != 0L); } public boolean isSelected() { return isSelected-impl(this.state); }
+/*     */ 
+/*     */   
+/* 232 */   public static boolean isEnabled-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getEnabled-s-VKNKU()) != 0L); } public boolean isEnabled() { return isEnabled-impl(this.state); }
+/*     */ 
+/*     */   
+/* 235 */   public static boolean isHovered-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getHovered-s-VKNKU()) != 0L); } public boolean isHovered() { return isHovered-impl(this.state); }
+/*     */ 
+/*     */   
+/* 238 */   public static boolean isPressed-impl(long arg0) { return (ULong.constructor-impl(arg0 & CommonStateBitMask.INSTANCE.getPressed-s-VKNKU()) != 0L); } public boolean isPressed() { return isPressed-impl(this.state); }
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */   
+/*     */   public static final long copy-59c8LF8(long arg0, boolean selected, boolean enabled, boolean pressed, boolean hovered, boolean active) {
+/* 246 */     return Companion.of-59c8LF8(selected, enabled, pressed, hovered, active);
+/*     */   }
+/* 248 */   public static int hashCode-impl(long arg0) { return ULong.hashCode-impl(arg0); } public int hashCode() { return hashCode-impl(this.state); } @NotNull public String toString() { return toString-impl(this.state); }
+/* 249 */   public static boolean equals-impl(long arg0, Object other) { if (!(other instanceof TabState)) return false;  long l = ((TabState)other).unbox-impl(); return !(arg0 != l); } @NotNull public static String toString-impl(long arg0) { return box-impl(arg0).getClass().getSimpleName() + "(isSelected=" + box-impl(arg0).getClass().getSimpleName() + ", isEnabled=" + isSelected-impl(arg0) + ", isHovered=" + isEnabled-impl(arg0) + ", isPressed=" + 
+/* 250 */       isHovered-impl(arg0) + " isActive=" + isPressed-impl(arg0) + ")"; }
+/*     */    public boolean equals(Object other) {
+/*     */     return equals-impl(this.state, other);
+/*     */   } public static long constructor-impl(long state) {
+/*     */     return state;
+/*     */   } public static final boolean equals-impl0(long p1, long p2) {
+/*     */     return ULong.equals-impl0(p1, p2);
+/*     */   }
+/*     */   @Metadata(mv = {2, 0, 0}, k = 1, xi = 48, d1 = {"\000\032\n\002\030\002\n\002\020\000\n\002\b\003\n\002\030\002\n\000\n\002\020\013\n\002\b\007\b\003\030\0002\0020\001B\t\b\002¢\006\004\b\002\020\003J=\020\004\032\0020\0052\006\020\006\032\0020\0072\b\b\002\020\b\032\0020\0072\b\b\002\020\t\032\0020\0072\b\b\002\020\n\032\0020\0072\b\b\002\020\013\032\0020\007¢\006\004\b\f\020\r¨\006\016"}, d2 = {"Lorg/jetbrains/jewel/ui/component/TabState$Companion;", "", "<init>", "()V", "of", "Lorg/jetbrains/jewel/ui/component/TabState;", "selected", "", "enabled", "pressed", "hovered", "active", "of-59c8LF8", "(ZZZZZ)J", "ui"})
+/*     */   public static final class Companion { public final long of-59c8LF8(boolean selected, boolean enabled, boolean pressed, boolean hovered, boolean active) {
+/* 260 */       return TabState.constructor-impl(
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */           
+/* 265 */           ULong.constructor-impl(ULong.constructor-impl(ULong.constructor-impl(ULong.constructor-impl((selected ? CommonStateBitMask.INSTANCE.getSelected-s-VKNKU() : 0L) | (enabled ? CommonStateBitMask.INSTANCE.getEnabled-s-VKNKU() : 0L)) | (pressed ? CommonStateBitMask.INSTANCE.getPressed-s-VKNKU() : 0L)) | (hovered ? CommonStateBitMask.INSTANCE.getHovered-s-VKNKU() : 0L)) | (active ? CommonStateBitMask.INSTANCE.getActive-s-VKNKU() : 0L)));
+/*     */     }
+/*     */     
+/*     */     private Companion() {} }
+/*     */ 
+/*     */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\jewel-ui-243-0.27.0.jar!\org\jetbrains\jewe\\ui\component\TabState.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

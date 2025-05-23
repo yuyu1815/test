@@ -1,0 +1,93 @@
+/*    */ package ai.grazie.api.gateway.client;
+/*    */ 
+/*    */ import ai.grazie.api.gateway.client.api.indexing.IndexingSearchClient;
+/*    */ import kotlin.Metadata;
+/*    */ import org.jetbrains.annotations.NotNull;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\022\n\002\030\002\n\002\020\000\n\002\b\002\n\002\030\002\n\000\b\004\030\0002\0020\001B\005¢\006\002\020\002J\006\020\003\032\0020\004¨\006\005"}, d2 = {"Lai/grazie/api/gateway/client/SuspendableAPIGatewayClient$Indexing;", "", "(Lai/grazie/api/gateway/client/SuspendableAPIGatewayClient;)V", "search", "Lai/grazie/api/gateway/client/api/indexing/IndexingSearchClient;", "api-gateway-client"})
+/*    */ public final class Indexing
+/*    */ {
+/*    */   @NotNull
+/*    */   public final IndexingSearchClient search() {
+/* 85 */     return new IndexingSearchClient(SuspendableAPIGatewayClient.this.getServerUrl(), SuspendableAPIGatewayClient.this.getAuthType(), SuspendableAPIGatewayClient.this.getHttpClient(), SuspendableAPIGatewayClient.this.getJson(), SuspendableAPIGatewayClient.this.getAnnotationLogger());
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\api-gateway-client-jvm-0.4.32.jar!\ai\grazie\api\gateway\client\SuspendableAPIGatewayClient$Indexing.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

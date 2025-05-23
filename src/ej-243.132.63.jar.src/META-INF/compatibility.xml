@@ -1,0 +1,15 @@
+<idea-plugin>
+  <incompatible-with>com.intellij.modules.androidstudio</incompatible-with>
+  <incompatible-with>com.intellij.modules.appcode.ide</incompatible-with>
+  <incompatible-with>com.intellij.modules.aqua</incompatible-with>
+  <incompatible-with>com.intellij.modules.clion</incompatible-with>
+  <incompatible-with>com.intellij.modules.datagrip</incompatible-with>
+  <incompatible-with>com.intellij.modules.pycharm.ds</incompatible-with>
+  <incompatible-with>com.intellij.modules.idea.community</incompatible-with>
+  <incompatible-with>com.intellij.jetbrains.client</incompatible-with>
+  <incompatible-with>com.intellij.modules.mps</incompatible-with>
+  <incompatible-with>com.intellij.modules.pycharm.community</incompatible-with>
+  <incompatible-with>com.intellij.modules.rider</incompatible-with>
+  <incompatible-with>com.intellij.modules.rubymine</incompatible-with>
+  <incompatible-with>com.intellij.modules.writerside</incompatible-with>
+</idea-plugin>

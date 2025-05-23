@@ -1,0 +1,62 @@
+package com.intellij.ml.llm.matterhorn.activation.data.model;
+
+import kotlin.Metadata;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+@Metadata(mv = {2, 1, 0}, k = 1, xi = 48, d1 = {"\000\026\n\002\030\002\n\002\030\002\n\002\b\002\n\002\030\002\n\002\030\002\n\000\bv\030\0002\0020\001:\002\002\003\001\002\004\005¨\006\006"}, d2 = {"Lcom/intellij/ml/llm/matterhorn/activation/data/model/AieProvisionStatus$AieFallback;", "Lcom/intellij/ml/llm/matterhorn/activation/data/model/AieProvisionStatus;", "AieServiceUnknownToProvisioner", "AieConfigurationNotProvisioned", "Lcom/intellij/ml/llm/matterhorn/activation/data/model/AieProvisionStatus$AieFallback$AieConfigurationNotProvisioned;", "Lcom/intellij/ml/llm/matterhorn/activation/data/model/AieProvisionStatus$AieFallback$AieServiceUnknownToProvisioner;", "data.model"})
+public interface AieFallback extends AieProvisionStatus {
+  @Metadata(mv = {2, 1, 0}, k = 1, xi = 48, d1 = {"\000$\n\002\030\002\n\002\030\002\n\002\b\003\n\002\020\013\n\000\n\002\020\000\n\000\n\002\020\b\n\000\n\002\020\016\n\000\bÆ\n\030\0002\0020\001B\t\b\002¢\006\004\b\002\020\003J\023\020\004\032\0020\0052\b\020\006\032\004\030\0010\007HÖ\003J\t\020\b\032\0020\tHÖ\001J\t\020\n\032\0020\013HÖ\001¨\006\f"}, d2 = {"Lcom/intellij/ml/llm/matterhorn/activation/data/model/AieProvisionStatus$AieFallback$AieServiceUnknownToProvisioner;", "Lcom/intellij/ml/llm/matterhorn/activation/data/model/AieProvisionStatus$AieFallback;", "<init>", "()V", "equals", "", "other", "", "hashCode", "", "toString", "", "data.model"})
+  public static final class AieServiceUnknownToProvisioner implements AieFallback {
+    @NotNull
+    public static final AieServiceUnknownToProvisioner INSTANCE = new AieServiceUnknownToProvisioner();
+    
+    @NotNull
+    public String toString() {
+      return "AieServiceUnknownToProvisioner";
+    }
+    
+    public int hashCode() {
+      return 1529303027;
+    }
+    
+    public boolean equals(@Nullable Object other) {
+      if (this == other)
+        return true; 
+      if (!(other instanceof AieServiceUnknownToProvisioner))
+        return false; 
+      (AieServiceUnknownToProvisioner)other;
+      return true;
+    }
+  }
+  
+  @Metadata(mv = {2, 1, 0}, k = 1, xi = 48, d1 = {"\000$\n\002\030\002\n\002\030\002\n\002\b\003\n\002\020\013\n\000\n\002\020\000\n\000\n\002\020\b\n\000\n\002\020\016\n\000\bÆ\n\030\0002\0020\001B\t\b\002¢\006\004\b\002\020\003J\023\020\004\032\0020\0052\b\020\006\032\004\030\0010\007HÖ\003J\t\020\b\032\0020\tHÖ\001J\t\020\n\032\0020\013HÖ\001¨\006\f"}, d2 = {"Lcom/intellij/ml/llm/matterhorn/activation/data/model/AieProvisionStatus$AieFallback$AieConfigurationNotProvisioned;", "Lcom/intellij/ml/llm/matterhorn/activation/data/model/AieProvisionStatus$AieFallback;", "<init>", "()V", "equals", "", "other", "", "hashCode", "", "toString", "", "data.model"})
+  public static final class AieConfigurationNotProvisioned implements AieFallback {
+    @NotNull
+    public static final AieConfigurationNotProvisioned INSTANCE = new AieConfigurationNotProvisioned();
+    
+    @NotNull
+    public String toString() {
+      return "AieConfigurationNotProvisioned";
+    }
+    
+    public int hashCode() {
+      return -155742984;
+    }
+    
+    public boolean equals(@Nullable Object other) {
+      if (this == other)
+        return true; 
+      if (!(other instanceof AieConfigurationNotProvisioned))
+        return false; 
+      (AieConfigurationNotProvisioned)other;
+      return true;
+    }
+  }
+}
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\ej-243.132.63.jar!\com\intellij\ml\llm\matterhorn\activation\data\model\AieProvisionStatus$AieFallback.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

@@ -1,0 +1,75 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.core">
+  <dependencies>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.core-llm.main"/>
+  </dependencies>
+
+  <extensionPoints>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.ejSupportProvider"
+                    interface="com.intellij.ml.llm.matterhorn.ej.core.ElectricJuniorSupportProvider"
+                    dynamic="true" />
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.relevance.extractors.ejElementProvider"
+                    beanClass="com.intellij.openapi.fileTypes.FileTypeExtensionPoint"
+                    dynamic="true">
+      <with attribute="implementationClass" implements="com.intellij.ml.llm.matterhorn.ej.core.relevance.extractors.ElementProvider"/>
+    </extensionPoint>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.ej.core.actions.edit.checks.ejErrorChecker"
+                    interface="com.intellij.ml.llm.matterhorn.ej.core.actions.edit.checks.ErrorChecker"
+                    dynamic="true"/>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.run.ejExecutionMode"
+                    interface="com.intellij.ml.llm.matterhorn.ej.core.run.ExecutionMode"
+                    dynamic="true"/>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.actions.productSpecificAllowedCommands"
+                    interface="com.intellij.ml.llm.matterhorn.ej.core.actions.ProductSpecificAllowedCommands$CommandsProvider"
+                    dynamic="true"/>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.projectUpdateTrigger"
+                    interface="com.intellij.ml.llm.matterhorn.ej.core.utils.await.ProjectUpdateTrigger"
+                    dynamic="true"/>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.ej.core.utils.await.projectModelUpdater"
+                    interface="com.intellij.ml.llm.matterhorn.ej.core.utils.await.ProjectModelUpdater"
+                    dynamic="true"/>
+
+  </extensionPoints>
+
+  <extensions defaultExtensionNs="com.intellij">
+
+    <ml.llm.matterhorn.propertyContainer implementation="com.intellij.ml.llm.matterhorn.ej.core.EjProperties" />
+    <statistics.validation.customValidationRule implementation="com.intellij.ml.llm.matterhorn.ej.core.statistics.TrueValidationRule"/>
+
+    <registryKey defaultValue="false" description="Use predefined elements to test UI in Matterhorn (do not use LLM)"
+                 key="matterhorn.debug.ui.mode" />
+    <registryKey defaultValue="false" description="Enable coroutine dumps for debugging purposes"
+                 key="matterhorn.debug.coroutine.dumps" />
+
+    <statistic.eventLog.eventLoggerProvider implementation="com.intellij.ml.llm.matterhorn.ej.core.statistics.MatterhornEventLoggerProvider"/>
+
+    <projectService serviceImplementation="com.intellij.ml.llm.matterhorn.ej.core.tasks.RecentTaskChainServiceImpl"
+                    serviceInterface="com.intellij.ml.llm.matterhorn.ej.core.tasks.RecentTaskChainService" />
+    <projectService serviceImplementation="com.intellij.ml.llm.matterhorn.ej.core.tasks.persistence.TaskStorageImpl"
+                    serviceInterface="com.intellij.ml.llm.matterhorn.ej.core.tasks.persistence.TaskStorage" />
+
+    <postStartupActivity implementation="com.intellij.ml.llm.matterhorn.ej.core.diagnostic.CoroutineDumpActivity" />
+    <fileEditorProvider id="junie-terminal-session-editor" order="before terminal-session-editor"
+                        implementation="com.intellij.ml.llm.matterhorn.ej.core.terminal.JunieTerminalSessionEditorProvider"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn.ej.core.actions.edit.checks">
+    <ejErrorChecker implementation="com.intellij.ml.llm.matterhorn.ej.core.actions.edit.checks.SyntaxErrorChecker" />
+    <ejErrorChecker implementation="com.intellij.ml.llm.matterhorn.ej.core.actions.edit.checks.InspectionErrorChecker" />
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn.run">
+    <ejExecutionMode implementation="com.intellij.ml.llm.matterhorn.ej.core.run.ExecutionMode$UnsafeLocal" />
+  </extensions>
+
+  <actions resource-bundle="messages.EJCoreBundle">
+    <action id="CreateDockerfileFromEnvironmentAction"
+            class="com.intellij.ml.llm.matterhorn.ej.core.debug.CreateDockerfileFromEnvironmentAction"
+            internal="true"
+    />
+  </actions>
+
+</idea-plugin>

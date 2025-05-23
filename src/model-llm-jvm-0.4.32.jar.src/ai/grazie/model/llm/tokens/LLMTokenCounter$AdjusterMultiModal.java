@@ -1,0 +1,35 @@
+/*    */ package ai.grazie.model.llm.tokens;
+/*    */ 
+/*    */ import ai.grazie.model.llm.chat.multimodal.LLMMultiModalChat;
+/*    */ import ai.grazie.model.llm.chat.multimodal.LLMMultiModalChatMessage;
+/*    */ import kotlin.Metadata;
+/*    */ import kotlin.jvm.functions.Function1;
+/*    */ import kotlin.jvm.internal.DefaultConstructorMarker;
+/*    */ import kotlin.jvm.internal.Intrinsics;
+/*    */ import kotlin.jvm.internal.Lambda;
+/*    */ import org.jetbrains.annotations.NotNull;
+/*    */ import org.jetbrains.annotations.Nullable;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\0000\n\002\030\002\n\002\020\000\n\000\n\002\030\002\n\002\030\002\n\002\020\b\n\000\n\002\030\002\n\002\b\b\n\002\020\013\n\002\b\003\n\002\020\016\n\002\b\002\b\b\030\000 \0252\0020\001:\001\025B-\022\022\020\002\032\016\022\004\022\0020\004\022\004\022\0020\0050\003\022\022\020\006\032\016\022\004\022\0020\007\022\004\022\0020\0050\003¢\006\002\020\bJ\025\020\f\032\016\022\004\022\0020\004\022\004\022\0020\0050\003HÆ\003J\025\020\r\032\016\022\004\022\0020\007\022\004\022\0020\0050\003HÆ\003J5\020\016\032\0020\0002\024\b\002\020\002\032\016\022\004\022\0020\004\022\004\022\0020\0050\0032\024\b\002\020\006\032\016\022\004\022\0020\007\022\004\022\0020\0050\003HÆ\001J\023\020\017\032\0020\0202\b\020\021\032\004\030\0010\001HÖ\003J\t\020\022\032\0020\005HÖ\001J\t\020\023\032\0020\024HÖ\001R\035\020\006\032\016\022\004\022\0020\007\022\004\022\0020\0050\003¢\006\b\n\000\032\004\b\t\020\nR\035\020\002\032\016\022\004\022\0020\004\022\004\022\0020\0050\003¢\006\b\n\000\032\004\b\013\020\n¨\006\026"}, d2 = {"Lai/grazie/model/llm/tokens/LLMTokenCounter$AdjusterMultiModal;", "", "message", "Lkotlin/Function1;", "Lai/grazie/model/llm/chat/multimodal/LLMMultiModalChatMessage;", "", "chat", "Lai/grazie/model/llm/chat/multimodal/LLMMultiModalChat;", "(Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V", "getChat", "()Lkotlin/jvm/functions/Function1;", "getMessage", "component1", "component2", "copy", "equals", "", "other", "hashCode", "toString", "", "Companion", "model-llm"})
+/*    */ public final class AdjusterMultiModal
+/*    */ {
+/*    */   public AdjusterMultiModal(@NotNull Function1<LLMMultiModalChatMessage, Integer> message, @NotNull Function1<LLMMultiModalChat, Integer> chat) {
+/* 24 */     this.message = message; this.chat = chat; } @NotNull public final Function1<LLMMultiModalChatMessage, Integer> getMessage() { return this.message; } @NotNull public final Function1<LLMMultiModalChat, Integer> getChat() { return this.chat; } @NotNull public final Function1<LLMMultiModalChatMessage, Integer> component1() { return this.message; } @NotNull public final Function1<LLMMultiModalChat, Integer> component2() { return this.chat; } @NotNull public final AdjusterMultiModal copy(@NotNull Function1<? super LLMMultiModalChatMessage, Integer> message, @NotNull Function1<? super LLMMultiModalChat, Integer> chat) { Intrinsics.checkNotNullParameter(message, "message"); Intrinsics.checkNotNullParameter(chat, "chat"); return new AdjusterMultiModal(message, chat); } @NotNull public String toString() { return "AdjusterMultiModal(message=" + this.message + ", chat=" + this.chat + ")"; } public int hashCode() { result = this.message.hashCode(); return result * 31 + this.chat.hashCode(); } public boolean equals(@Nullable Object other) { if (this == other) return true;  if (!(other instanceof AdjusterMultiModal)) return false;  AdjusterMultiModal adjusterMultiModal = (AdjusterMultiModal)other; return !Intrinsics.areEqual(this.message, adjusterMultiModal.message) ? false : (!!Intrinsics.areEqual(this.chat, adjusterMultiModal.chat)); } @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\024\n\002\030\002\n\002\020\000\n\002\b\002\n\002\030\002\n\002\b\003\b\003\030\0002\0020\001B\007\b\002¢\006\002\020\002R\021\020\003\032\0020\004¢\006\b\n\000\032\004\b\005\020\006¨\006\007"}, d2 = {"Lai/grazie/model/llm/tokens/LLMTokenCounter$AdjusterMultiModal$Companion;", "", "()V", "None", "Lai/grazie/model/llm/tokens/LLMTokenCounter$AdjusterMultiModal;", "getNone", "()Lai/grazie/model/llm/tokens/LLMTokenCounter$AdjusterMultiModal;", "model-llm"}) public static final class Companion
+/*    */   {
+/* 26 */     @NotNull public final LLMTokenCounter.AdjusterMultiModal getNone() { return LLMTokenCounter.AdjusterMultiModal.None; } private Companion() {} } @NotNull public static final Companion Companion = new Companion(null); @NotNull private final Function1<LLMMultiModalChatMessage, Integer> message; @NotNull private final Function1<LLMMultiModalChat, Integer> chat; @NotNull private static final AdjusterMultiModal None = new AdjusterMultiModal(LLMTokenCounter$AdjusterMultiModal$Companion$None$1.INSTANCE, LLMTokenCounter$AdjusterMultiModal$Companion$None$2.INSTANCE); @Metadata(mv = {1, 7, 0}, k = 3, xi = 48, d1 = {"\000\020\n\000\n\002\020\b\n\000\n\002\030\002\n\002\b\002\020\000\032\0020\0012\006\020\002\032\0020\003H\n¢\006\004\b\004\020\005"}, d2 = {"<anonymous>", "", "it", "Lai/grazie/model/llm/chat/multimodal/LLMMultiModalChat;", "invoke", "(Lai/grazie/model/llm/chat/multimodal/LLMMultiModalChat;)Ljava/lang/Integer;"}) static final class LLMTokenCounter$AdjusterMultiModal$Companion$None$2 extends Lambda implements Function1<LLMMultiModalChat, Integer> { public static final LLMTokenCounter$AdjusterMultiModal$Companion$None$2 INSTANCE = new LLMTokenCounter$AdjusterMultiModal$Companion$None$2(); LLMTokenCounter$AdjusterMultiModal$Companion$None$2() { super(1); } public final Integer invoke(LLMMultiModalChat it) { Intrinsics.checkNotNullParameter(it, "it"); return Integer.valueOf(0); } } @Metadata(mv = {1, 7, 0}, k = 3, xi = 48, d1 = {"\000\020\n\000\n\002\020\b\n\000\n\002\030\002\n\002\b\002\020\000\032\0020\0012\006\020\002\032\0020\003H\n¢\006\004\b\004\020\005"}, d2 = {"<anonymous>", "", "it", "Lai/grazie/model/llm/chat/multimodal/LLMMultiModalChatMessage;", "invoke", "(Lai/grazie/model/llm/chat/multimodal/LLMMultiModalChatMessage;)Ljava/lang/Integer;"}) static final class LLMTokenCounter$AdjusterMultiModal$Companion$None$1 extends Lambda implements Function1<LLMMultiModalChatMessage, Integer> { public static final LLMTokenCounter$AdjusterMultiModal$Companion$None$1 INSTANCE = new LLMTokenCounter$AdjusterMultiModal$Companion$None$1(); LLMTokenCounter$AdjusterMultiModal$Companion$None$1() { super(1); } public final Integer invoke(LLMMultiModalChatMessage it) { Intrinsics.checkNotNullParameter(it, "it"); return Integer.valueOf(0); }
+/*    */      }
+/*    */ 
+/*    */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\model-llm-jvm-0.4.32.jar!\ai\grazie\model\llm\tokens\LLMTokenCounter$AdjusterMultiModal.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

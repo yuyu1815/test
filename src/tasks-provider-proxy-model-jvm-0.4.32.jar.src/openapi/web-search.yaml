@@ -1,0 +1,27 @@
+openapi: 3.1.0
+info:
+  title: web-search
+  description: Searches information in the Internet.
+  version: DEV
+  x-namespace: tasks.text.webSearch
+  x-task-name: web-search
+servers:
+- url: /
+components:
+  schemas:
+    WebSearchTaskParams:
+      type: object
+      properties:
+        query:
+          type: string
+          description: A query to be sent to search engine.
+          minLength: 1
+        maxResults:
+          type: integer
+          description: The maximum number of search results to return.
+          minimum: 1
+      required:
+      - maxResults
+      - query
+      x-task-parameters: true
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema

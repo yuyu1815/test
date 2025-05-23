@@ -1,0 +1,16 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.clion">
+  <dependencies>
+    <plugin id="org.jetbrains.plugins.clion.radler"/>
+
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <ejSupportProvider implementation="com.intellij.ml.llm.matterhorn.ej.clion.CLionElectricJuniorSupportProvider" />
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn.ej.core.actions.edit.checks">
+    <ejErrorChecker implementation="com.intellij.ml.llm.matterhorn.ej.clion.RadErrorChecker"/>
+  </extensions>
+</idea-plugin>

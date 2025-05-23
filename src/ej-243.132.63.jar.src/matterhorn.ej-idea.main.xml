@@ -1,0 +1,68 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.idea">
+  <resource-bundle>messages.JavaMatterhornBundle</resource-bundle>
+
+  <dependencies>
+    <plugin id="com.intellij.java"/>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main"/>
+  </dependencies>
+
+  <extensionPoints>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.actions.tests.testRunActionLocationContributor"
+                    interface="com.intellij.ml.llm.matterhorn.ej.idea.actions.tests.TestRunActionLocationContributor"
+                    dynamic="true"/>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.run.buildListenerRegistrar"
+                    interface="com.intellij.ml.llm.matterhorn.ej.idea.run.BuildListenerRegistrar"
+                    dynamic="true" />
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.run.testListenerRegistrar"
+                    interface="com.intellij.ml.llm.matterhorn.ej.idea.run.TestListenerRegistrar"
+                    dynamic="true" />
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.run.testConfigurationPopupInterceptorProvider"
+                    interface="com.intellij.ml.llm.matterhorn.ej.idea.run.tests.TestConfigurationPopupInterceptor$Provider"
+                    dynamic="true" />
+  </extensionPoints>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <ejSupportProvider implementation="com.intellij.ml.llm.matterhorn.ej.idea.JvmElectricJuniorSupportProvider" />
+
+    <relevance.extractors.ejElementProvider
+      filetype="JAVA"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.idea.relevance.extractors.JavaElementProvider"/>
+
+    <matterhornStarter
+      key="ElectricJuniorIdea"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.idea.IdeaAgentMatterhornStarter"/>
+
+    <matterhornStarter
+      key="ElectricJuniorIdeaChecker"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.idea.IdeaProjectCheckMatterhornStarter"/>
+
+    <matterhornStarter
+      key="ElectricJuniorIdeaChat"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.idea.IdeaChatAgentMatterhornStarter"/>
+
+    <sensitiveFileDetector implementation="com.intellij.ml.llm.matterhorn.ej.idea.JavaSensitiveFileDetector" />
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn.actions.tests">
+    <testRunActionLocationContributor id="Jvm" implementation="com.intellij.ml.llm.matterhorn.ej.idea.actions.tests.JvmTestRunActionLocationContributor"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn.run">
+    <buildListenerRegistrar implementation="com.intellij.ml.llm.matterhorn.ej.idea.run.BuildProgressListenerRegistrar" />
+    <testListenerRegistrar implementation="com.intellij.ml.llm.matterhorn.ej.idea.run.SMTRunnerEventsListenerRegistrar" />
+    <testConfigurationPopupInterceptorProvider implementation="com.intellij.ml.llm.matterhorn.ej.idea.run.tests.JUnitTestConfigurationPopupInterceptor$Provider"/>
+    <testConfigurationPopupInterceptorProvider implementation="com.intellij.ml.llm.matterhorn.ej.idea.run.tests.GradleTestConfigurationPopupInterceptor$Provider"/>
+  </extensions>
+
+  <extensionPoints>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.idea.projectConfigurator"
+                    interface="com.intellij.ml.llm.matterhorn.ej.idea.IdeaProjectConfigurator"
+                    dynamic="true"
+    />
+  </extensionPoints>
+
+</idea-plugin>

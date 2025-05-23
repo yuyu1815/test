@@ -1,0 +1,25 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.android">
+  <dependencies>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main"/>
+    <module name="matterhorn.ej-idea.main"/>
+    <module name="matterhorn.ej-idea.ej-gradle.main" />
+    <plugin id="com.intellij.java"/>
+    <plugin id="org.jetbrains.android"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <run.testListenerRegistrar implementation="com.intellij.ml.llm.matterhorn.ej.android.connectedTest.AndroidTestResultsListenerRegistrar" />
+    <ej.core.utils.await.projectModelUpdater implementation="com.intellij.ml.llm.matterhorn.ej.android.AndroidProjectModelUpdater" />
+  </extensions>
+
+  <extensions defaultExtensionNs="com.android.tools.idea.execution.common">
+    <androidConfigurationExecutorProvider
+      implementation="com.intellij.ml.llm.matterhorn.ej.android.connectedTest.ProxyGradleAndroidTestRunConfigurationExecutorProvider"
+      order="first"
+    />
+  </extensions>
+</idea-plugin>

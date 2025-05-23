@@ -1,0 +1,23 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.activation.data.impl.grazie">
+  <dependencies>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-ui.activation.platform.main"/>
+    <module name="matterhorn.ej-ui.activation.data.model.main"/>
+    <module name="matterhorn.ej-ui.activation.data.repos.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.repos.JunieGrazieRepository"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.impl.grazie.JunieGrazieRepositoryImpl"/>
+
+    <applicationService
+      serviceInterface="com.intellij.ml.llm.matterhorn.activation.data.impl.grazie.JunieGrazieApiGatewayClientProvider"
+      serviceImplementation="com.intellij.ml.llm.matterhorn.activation.data.impl.grazie.JunieGrazieApiGatewayClientProviderImpl"/>
+
+  </extensions>
+
+</idea-plugin>

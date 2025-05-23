@@ -1,0 +1,68 @@
+/*    */ package ai.grazie.model.task.library.code;
+/*    */ import ai.grazie.model.task.exec.TaskParameters;
+/*    */ import ai.grazie.model.task.exec.TaskParametersBuilder;
+/*    */ import ai.grazie.model.task.id.TaskTag;
+/*    */ import ai.grazie.utils.attributes.AttributeDescriptor;
+/*    */ import ai.grazie.utils.attributes.Attributes;
+/*    */ import ai.grazie.utils.attributes.AttributesBuilder;
+/*    */ import java.util.List;
+/*    */ import kotlin.Deprecated;
+/*    */ import kotlin.Metadata;
+/*    */ import kotlin.Unit;
+/*    */ import kotlin.jvm.functions.Function1;
+/*    */ import kotlin.jvm.internal.DefaultConstructorMarker;
+/*    */ import kotlin.jvm.internal.Intrinsics;
+/*    */ import kotlin.jvm.internal.Lambda;
+/*    */ import kotlinx.serialization.KSerializer;
+/*    */ import org.jetbrains.annotations.NotNull;
+/*    */ import org.jetbrains.annotations.Nullable;
+/*    */ 
+/*    */ @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\f\n\002\030\002\n\002\020\000\n\002\b\003\bÆ\002\030\0002\0020\001:\001\003B\007\b\002¢\006\002\020\002¨\006\004"}, d2 = {"Lai/grazie/model/task/library/code/CodeEditCommitMessageTask$LLM$IJ;", "", "()V", "Slow", "model-task"})
+/*    */ public final class IJ {
+/*    */   @NotNull
+/*    */   public static final IJ INSTANCE = new IJ();
+/*    */   
+/*    */   @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\034\n\002\030\002\n\002\030\002\n\002\b\002\n\002\030\002\n\002\b\004\n\002\030\002\n\002\b\005\bÆ\002\030\0002\0020\001:\002\f\rB\007\b\002¢\006\002\020\002R\034\020\003\032\0020\0048\006X\004¢\006\016\n\000\022\004\b\005\020\002\032\004\b\006\020\007R\024\020\b\032\0020\tX\004¢\006\b\n\000\032\004\b\n\020\013¨\006\016"}, d2 = {"Lai/grazie/model/task/library/code/CodeEditCommitMessageTask$LLM$IJ$Slow;", "Lai/grazie/model/task/id/TaskTagDescriptor$Stable;", "()V", "defaults", "Lai/grazie/model/task/exec/TaskParameters;", "getDefaults$annotations", "getDefaults", "()Lai/grazie/model/task/exec/TaskParameters;", "tag", "Lai/grazie/model/task/id/TaskTag;", "getTag", "()Lai/grazie/model/task/id/TaskTag;", "Params", "Schema", "model-task"})
+/*    */   public static final class Slow implements TaskTagDescriptor.Stable {
+/*    */     @NotNull
+/* 28 */     public static final Slow INSTANCE = new Slow(); @NotNull private static final TaskTag tag = new TaskTag("llm-ij-slow-default"); @NotNull public TaskTag getTag() { return tag; }
+/*    */      @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\0004\n\002\030\002\n\002\030\002\n\002\b\002\n\002\020 \n\002\030\002\n\002\030\002\n\002\030\002\n\002\020\000\n\002\b\004\n\002\030\002\n\002\b\003\n\002\030\002\n\002\b\007\bÆ\002\030\0002\0020\001B\007\b\002¢\006\002\020\002R:\020\003\032\"\022\036\022\034\022\006\b\001\022\0020\006\022\006\b\001\022\0020\007\022\b\b\001\022\004\030\0010\b0\0050\004X\004¢\006\016\n\000\022\004\b\t\020\002\032\004\b\n\020\013R\021\020\f\032\0020\r¢\006\b\n\000\032\004\b\016\020\017R\021\020\020\032\0020\021¢\006\b\n\000\032\004\b\022\020\023R\021\020\024\032\0020\r¢\006\b\n\000\032\004\b\025\020\017R\021\020\026\032\0020\021¢\006\b\n\000\032\004\b\027\020\023¨\006\030"}, d2 = {"Lai/grazie/model/task/library/code/CodeEditCommitMessageTask$LLM$IJ$Slow$Schema;", "Lai/grazie/model/task/id/TaskSchemaDescriptor;", "()V", "all", "", "Lai/grazie/utils/attributes/AttributeDescriptor;", "Lai/grazie/utils/attributes/Attributes$Key;", "Lai/grazie/utils/attributes/Attributes$Value;", "", "getAll$annotations", "getAll", "()Ljava/util/List;", "descriptionLength", "Lai/grazie/utils/attributes/AttributeDescriptor$OptInt;", "getDescriptionLength", "()Lai/grazie/utils/attributes/AttributeDescriptor$OptInt;", "diff", "Lai/grazie/utils/attributes/AttributeDescriptor$Text;", "getDiff", "()Lai/grazie/utils/attributes/AttributeDescriptor$Text;", "summaryLength", "getSummaryLength", "text", "getText", "model-task"})
+/*    */     public static final class Schema implements TaskSchemaDescriptor { @NotNull
+/* 31 */       public static final Schema INSTANCE = new Schema(); @NotNull private static final AttributeDescriptor.Text diff = new AttributeDescriptor.Text("diff"); @NotNull public final AttributeDescriptor.Text getDiff() { return diff; } @NotNull
+/* 32 */       private static final AttributeDescriptor.Text text = new AttributeDescriptor.Text("text"); @NotNull public final AttributeDescriptor.Text getText() { return text; } @NotNull
+/* 33 */       private static final AttributeDescriptor.OptInt summaryLength = new AttributeDescriptor.OptInt("summaryLength"); @NotNull public final AttributeDescriptor.OptInt getSummaryLength() { return summaryLength; } @NotNull
+/* 34 */       private static final AttributeDescriptor.OptInt descriptionLength = new AttributeDescriptor.OptInt("descriptionLength"); @NotNull private static final List<AttributeDescriptor<? extends Attributes.Key, ? extends Attributes.Value, ? extends Object>> all; @NotNull public final AttributeDescriptor.OptInt getDescriptionLength() { return descriptionLength; }
+/*    */       
+/*    */       @NotNull
+/* 37 */       public List<AttributeDescriptor<? extends Attributes.Key, ? extends Attributes.Value, ? extends Object>> getAll() { return all; } static { AttributeDescriptor[] arrayOfAttributeDescriptor = new AttributeDescriptor[4]; arrayOfAttributeDescriptor[0] = (AttributeDescriptor)diff; arrayOfAttributeDescriptor[1] = (AttributeDescriptor)text; arrayOfAttributeDescriptor[2] = (AttributeDescriptor)summaryLength; arrayOfAttributeDescriptor[3] = (AttributeDescriptor)descriptionLength; all = CollectionsKt.listOf((Object[])arrayOfAttributeDescriptor); }
+/*    */        }
+/*    */     
+/*    */     @NotNull
+/* 41 */     private static final TaskParameters defaults = TaskParameters.Companion.build(CodeEditCommitMessageTask$LLM$IJ$Slow$defaults$1.INSTANCE); @NotNull public final TaskParameters getDefaults() { return defaults; } @Metadata(mv = {1, 7, 0}, k = 3, xi = 48, d1 = {"\000\f\n\000\n\002\020\002\n\002\030\002\n\000\020\000\032\0020\001*\0020\002H\n¢\006\002\b\003"}, d2 = {"<anonymous>", "", "Lai/grazie/model/task/exec/TaskParametersBuilder;", "invoke"})
+/* 42 */     static final class CodeEditCommitMessageTask$LLM$IJ$Slow$defaults$1 extends Lambda implements Function1<TaskParametersBuilder, Unit> { public static final CodeEditCommitMessageTask$LLM$IJ$Slow$defaults$1 INSTANCE = new CodeEditCommitMessageTask$LLM$IJ$Slow$defaults$1(); public final void invoke(TaskParametersBuilder $this$build) { Intrinsics.checkNotNullParameter($this$build, "$this$build"); $this$build.add((AttributeDescriptor)CodeEditCommitMessageTask.LLM.IJ.Slow.Schema.INSTANCE.getSummaryLength(), Integer.valueOf(50));
+/* 43 */         $this$build.add((AttributeDescriptor)CodeEditCommitMessageTask.LLM.IJ.Slow.Schema.INSTANCE.getDescriptionLength(), Integer.valueOf(200)); } CodeEditCommitMessageTask$LLM$IJ$Slow$defaults$1() { super(1); } }
+/*    */      @Deprecated(message = "Use schema with task builder") @Serializable(with = TaskParameters.Serializer.class) @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\"\n\002\030\002\n\002\030\002\n\000\n\002\020\016\n\002\b\002\n\002\020\b\n\002\b\003\n\002\030\002\n\002\b\013\b\007\030\000 \0242\0020\001:\001\024B-\022\006\020\002\032\0020\003\022\006\020\004\032\0020\003\022\n\b\002\020\005\032\004\030\0010\006\022\n\b\002\020\007\032\004\030\0010\006¢\006\002\020\bR\024\020\t\032\0020\nX\004¢\006\b\n\000\032\004\b\013\020\fR\025\020\007\032\004\030\0010\006¢\006\n\n\002\020\017\032\004\b\r\020\016R\021\020\002\032\0020\003¢\006\b\n\000\032\004\b\020\020\021R\025\020\005\032\004\030\0010\006¢\006\n\n\002\020\017\032\004\b\022\020\016R\021\020\004\032\0020\003¢\006\b\n\000\032\004\b\023\020\021¨\006\025"}, d2 = {"Lai/grazie/model/task/library/code/CodeEditCommitMessageTask$LLM$IJ$Slow$Params;", "Lai/grazie/model/task/exec/TaskParameters;", "diff", "", "text", "summaryLength", "", "descriptionLength", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;)V", "attributes", "Lai/grazie/utils/attributes/Attributes;", "getAttributes", "()Lai/grazie/utils/attributes/Attributes;", "getDescriptionLength", "()Ljava/lang/Integer;", "Ljava/lang/Integer;", "getDiff", "()Ljava/lang/String;", "getSummaryLength", "getText", "Companion", "model-task"}) public static final class Params extends TaskParameters { @NotNull public static final Companion Companion = new Companion(null); @NotNull private final String diff; @NotNull private final String text; @Nullable private final Integer summaryLength; @Nullable private final Integer descriptionLength; @NotNull private final Attributes attributes; @Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\026\n\002\030\002\n\002\020\000\n\002\b\002\n\002\030\002\n\002\030\002\n\000\b\003\030\0002\0020\001B\007\b\002¢\006\002\020\002J\017\020\003\032\b\022\004\022\0020\0050\004HÆ\001¨\006\006"}, d2 = {"Lai/grazie/model/task/library/code/CodeEditCommitMessageTask$LLM$IJ$Slow$Params$Companion;", "", "()V", "serializer", "Lkotlinx/serialization/KSerializer;", "Lai/grazie/model/task/library/code/CodeEditCommitMessageTask$LLM$IJ$Slow$Params;", "model-task"})
+/*    */       public static final class Companion { @NotNull
+/* 46 */         public final KSerializer<CodeEditCommitMessageTask.LLM.IJ.Slow.Params> serializer() { return (KSerializer<CodeEditCommitMessageTask.LLM.IJ.Slow.Params>)TaskParameters.Serializer.INSTANCE; }
+/*    */          private Companion() {} } public Params(@NotNull String diff, @NotNull String text, @Nullable Integer summaryLength, @Nullable Integer descriptionLength) {
+/* 48 */         this.diff = diff; this.text = text; this.summaryLength = summaryLength; this.descriptionLength = descriptionLength;
+/* 49 */         this.attributes = Attributes.Companion.build(new CodeEditCommitMessageTask$LLM$IJ$Slow$Params$attributes$1()); } @NotNull public final String getDiff() { return this.diff; } @NotNull public final String getText() { return this.text; } @Nullable public final Integer getSummaryLength() { return this.summaryLength; } @Nullable public final Integer getDescriptionLength() { return this.descriptionLength; } @NotNull public Attributes getAttributes() { return this.attributes; } @Metadata(mv = {1, 7, 0}, k = 3, xi = 48, d1 = {"\000\f\n\000\n\002\020\002\n\002\030\002\n\000\020\000\032\0020\001*\0020\002H\n¢\006\002\b\003"}, d2 = {"<anonymous>", "", "Lai/grazie/utils/attributes/AttributesBuilder;", "invoke"})
+/* 50 */       static final class CodeEditCommitMessageTask$LLM$IJ$Slow$Params$attributes$1 extends Lambda implements Function1<AttributesBuilder, Unit> { public final void invoke(AttributesBuilder $this$build) { Intrinsics.checkNotNullParameter($this$build, "$this$build"); $this$build.text("diff", CodeEditCommitMessageTask.LLM.IJ.Slow.Params.this.getDiff());
+/* 51 */           $this$build.text("text", CodeEditCommitMessageTask.LLM.IJ.Slow.Params.this.getText());
+/* 52 */           $this$build.optInt("summaryLength", CodeEditCommitMessageTask.LLM.IJ.Slow.Params.this.getSummaryLength());
+/* 53 */           $this$build.optInt("descriptionLength", CodeEditCommitMessageTask.LLM.IJ.Slow.Params.this.getDescriptionLength()); }
+/*    */ 
+/*    */         
+/*    */         CodeEditCommitMessageTask$LLM$IJ$Slow$Params$attributes$1() {
+/*    */           super(1);
+/*    */         } }
+/*    */        }
+/*    */   
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\model-task-jvm-0.4.32.jar!\ai\grazie\model\task\library\code\CodeEditCommitMessageTask$LLM$IJ.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

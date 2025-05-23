@@ -1,0 +1,22 @@
+openapi: 3.1.0
+info:
+  title: web-scrape
+  description: Retrieves HTML content from a specific URL.
+  version: DEV
+  x-namespace: tasks.text.webCrawl
+  x-task-name: web-scrape
+servers:
+- url: /
+components:
+  schemas:
+    WebScrapeTaskParams:
+      type: object
+      properties:
+        url:
+          type: string
+          description: URL to retrieve HTML content from.
+          minLength: 1
+      required:
+      - url
+      x-task-parameters: true
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema

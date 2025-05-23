@@ -1,0 +1,21 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.idea.gradle">
+  <resource-bundle>messages.JavaMatterhornBundle</resource-bundle>
+
+  <dependencies>
+    <plugin id="com.intellij.gradle"/>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main"/>
+    <module name="matterhorn.ej-idea.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="org.jetbrains.plugins.gradle">
+    <taskManager implementation="com.intellij.ml.llm.matterhorn.ej.idea.gradle.HackGradleManagerExtension"/>
+  </extensions>
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <idea.projectConfigurator implementation="com.intellij.ml.llm.matterhorn.ej.idea.gradle.GradleProjectConfigurator" />
+    <projectUpdateTrigger implementation="com.intellij.ml.llm.matterhorn.ej.idea.gradle.GradleProjectUpdateTrigger" />
+  </extensions>
+</idea-plugin>

@@ -1,0 +1,29 @@
+/*    */ package androidx.compose.ui.graphics;
+/*    */ 
+/*    */ import kotlin.Deprecated;
+/*    */ import kotlin.Metadata;
+/*    */ import kotlin.ReplaceWith;
+/*    */ import kotlin.jvm.internal.Intrinsics;
+/*    */ import org.jetbrains.annotations.NotNull;
+/*    */ import org.jetbrains.skia.Path;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ @Metadata(mv = {1, 9, 0}, k = 2, xi = 48, d1 = {"\000\f\n\000\n\002\030\002\n\002\030\002\n\000\032\r\020\000\032\0020\001*\0020\002H\b¨\006\003"}, d2 = {"asDesktopPath", "Lorg/jetbrains/skia/Path;", "Landroidx/compose/ui/graphics/Path;", "ui-graphics"})
+/*    */ public final class DesktopPath_desktopKt
+/*    */ {
+/*    */   @Deprecated(message = "Use asSkiaPath()", replaceWith = @ReplaceWith(expression = "asSkiaPath()", imports = {}))
+/*    */   @NotNull
+/*    */   public static final Path asDesktopPath(@NotNull Path $this$asDesktopPath) {
+/* 21 */     Intrinsics.checkNotNullParameter($this$asDesktopPath, "<this>"); int $i$f$asDesktopPath = 0; return SkiaBackedPath_skikoKt.asSkiaPath($this$asDesktopPath);
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\li\\ui-graphics-desktop-1.7.3.jar!\androidx\compos\\ui\graphics\DesktopPath_desktopKt.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

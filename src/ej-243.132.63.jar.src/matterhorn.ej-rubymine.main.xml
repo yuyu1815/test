@@ -1,0 +1,29 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.rubymine">
+  <dependencies>
+    <!--suppress PluginXmlValidity -->
+    <plugin id="org.jetbrains.plugins.ruby"/>
+
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <ejSupportProvider implementation="com.intellij.ml.llm.matterhorn.ej.rubymine.RubyMineElectricJuniorSupportProvider" />
+
+    <relevance.extractors.ejElementProvider
+      filetype="Ruby"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.rubymine.relevance.extractors.RubyElementProvider"/>
+
+    <matterhornStarter
+      key="ElectricJuniorRubyMine"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.rubymine.RubyMineAgentMatterhornStarter"/>
+
+    <matterhornStarter
+      key="ElectricJuniorRubyMineChecker"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.rubymine.RubyMineProjectCheckMatterhornStarter"/>
+
+  </extensions>
+</idea-plugin>

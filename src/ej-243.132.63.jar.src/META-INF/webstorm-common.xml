@@ -1,0 +1,12 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <relevance.extractors.ejElementProvider
+      filetype="TypeScript"
+      implementationClass="com.intellij.ml.llm.matterhorn.webstorm.common.TypescriptElementProvider"
+    />
+  </extensions>
+</idea-plugin>
+<!--
+ FIXME: Revisit: KEPT HERE TEMPORARILY to avoid breaking Kineto
+  for Junie, the source of truth is at `matterhorn.webstorm-common.main.xml`
+-->

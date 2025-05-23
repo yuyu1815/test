@@ -1,0 +1,8 @@
+/* 1 */ package androidx.compose.runtime;@Metadata(mv = {1, 9, 0}, k = 4, xi = 48, d1 = {"androidx/compose/runtime/ActualJvm_jvmKt__ActualJvm_jvmKt", "androidx/compose/runtime/ActualJvm_jvmKt__SynchronizedObject_jvmKt"}) public final class ActualJvm_jvmKt { @InternalComposeApi public static final int identityHashCode(@Nullable Object instance) { return ActualJvm_jvmKt__ActualJvm_jvmKt.identityHashCode(instance); } public static final void invokeComposable(@NotNull Composer composer, @NotNull Function2<? super Composer, ? super Integer, Unit> composable) { ActualJvm_jvmKt__ActualJvm_jvmKt.invokeComposable(composer, composable); } public static final <T> T invokeComposableForResult(@NotNull Composer composer, @NotNull Function2<? super Composer, ? super Integer, ? extends T> composable) { return ActualJvm_jvmKt__ActualJvm_jvmKt.invokeComposableForResult(composer, composable); } public static final long currentThreadId() { return ActualJvm_jvmKt__ActualJvm_jvmKt.currentThreadId(); } @NotNull public static final String currentThreadName() { return ActualJvm_jvmKt__ActualJvm_jvmKt.currentThreadName(); } @PublishedApi public static final <R> R synchronized(@NotNull SynchronizedObject lock, @NotNull Function0<? extends R> block) { return ActualJvm_jvmKt__SynchronizedObject_jvmKt.synchronized(lock, block); }
+/*   */    }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\runtime-desktop-1.7.3.jar!\androidx\compose\runtime\ActualJvm_jvmKt.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

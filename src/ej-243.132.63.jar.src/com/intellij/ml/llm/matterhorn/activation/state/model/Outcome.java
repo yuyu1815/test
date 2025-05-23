@@ -1,0 +1,34 @@
+/*    */ package com.intellij.ml.llm.matterhorn.activation.state.model;@JvmInline
+/*    */ @Metadata(mv = {2, 1, 0}, k = 1, xi = 48, d1 = {"\0004\n\002\030\002\n\002\b\002\n\002\020\000\n\002\b\004\n\002\020\013\n\002\b\013\n\002\030\002\n\002\030\002\n\002\b\n\n\002\020\b\n\002\b\003\n\002\020\016\n\002\b\005\b@\030\000 (*\006\b\000\020\001 \001*\006\b\001\020\002 \0012\0020\003:\002'(B\023\b\002\022\b\020\004\032\004\030\0010\003¢\006\004\b\005\020\006J\017\020\r\032\004\030\0018\000¢\006\004\b\016\020\006J\017\020\017\032\004\030\0018\001¢\006\004\b\020\020\006J_\020\021\032\002H\022\"\004\b\002\020\0222!\020\023\032\035\022\023\022\0218\001¢\006\f\b\025\022\b\b\026\022\004\b\b(\004\022\004\022\002H\0220\0242!\020\027\032\035\022\023\022\0218\000¢\006\f\b\025\022\b\b\026\022\004\b\b(\030\022\004\022\002H\0220\024H\bø\001\000¢\006\004\b\031\020\032J\032\020\033\032\0020\b2\b\020\034\032\004\030\0010\003HÖ\003¢\006\004\b\035\020\036J\020\020\037\032\0020 HÖ\001¢\006\004\b!\020\"J\020\020#\032\0020$HÖ\001¢\006\004\b%\020&R\020\020\004\032\004\030\0010\003X\004¢\006\002\n\000R\021\020\007\032\0020\b8F¢\006\006\032\004\b\t\020\nR\021\020\013\032\0020\b8F¢\006\006\032\004\b\f\020\n\001\004\001\004\030\0010\003\002\007\n\005\b20\001¨\006)"}, d2 = {"Lcom/intellij/ml/llm/matterhorn/activation/state/model/Outcome;", "I", "T", "", "value", "constructor-impl", "(Ljava/lang/Object;)Ljava/lang/Object;", "isIncomplete", "", "isIncomplete-impl", "(Ljava/lang/Object;)Z", "isComplete", "isComplete-impl", "incompleteOrNull", "incompleteOrNull-impl", "getOrNull", "getOrNull-impl", "fold", "R", "onComplete", "Lkotlin/Function1;", "Lkotlin/ParameterName;", "name", "onIncomplete", "incomplete", "fold-impl", "(Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;", "equals", "other", "equals-impl", "(Ljava/lang/Object;Ljava/lang/Object;)Z", "hashCode", "", "hashCode-impl", "(Ljava/lang/Object;)I", "toString", "", "toString-impl", "(Ljava/lang/Object;)Ljava/lang/String;", "Incomplete", "Companion", "state.model"})
+/*    */ public final class Outcome<I, T> { @NotNull
+/*    */   public static final Companion Companion = new Companion(null); @Nullable
+/*    */   private final Object value;
+/*  6 */   public static final boolean isIncomplete-impl(Object arg0) { return arg0 instanceof Incomplete; }
+/*  7 */   public static final boolean isComplete-impl(Object arg0) { return !(arg0 instanceof Incomplete); }
+/*    */   @Nullable
+/*  9 */   public static final I incompleteOrNull-impl(Object arg0) { Object object = arg0; (object instanceof Incomplete) ? object : null; if (((((object instanceof Incomplete) ? object : null) != null) ? ((object instanceof Incomplete) ? object : null).getIncompleteValue() : null) == null) (((object instanceof Incomplete) ? object : null) != null) ? ((object instanceof Incomplete) ? object : null).getIncompleteValue() : null;  return null; } @Nullable
+/* 10 */   public static final T getOrNull-impl(Object arg0) { if (arg0 == null); return (arg0 instanceof Incomplete) ? null : null; } public static String toString-impl(Object arg0) { return "Outcome(value=" + arg0 + ")"; }
+/*    */   public String toString() { return toString-impl(this.value); }
+/*    */   public static int hashCode-impl(Object arg0) { return (arg0 == null) ? 0 : arg0.hashCode(); }
+/*    */   public int hashCode() {
+/*    */     return hashCode-impl(this.value);
+/*    */   }
+/* 16 */   public static final <R> R fold-impl(Object arg0, @NotNull Function1 onComplete, @NotNull Function1 onIncomplete) { Intrinsics.checkNotNullParameter(onComplete, "onComplete"); Intrinsics.checkNotNullParameter(onIncomplete, "onIncomplete"); int $i$f$fold-impl = 0; boolean bool = isIncomplete-impl(arg0);
+/*    */     
+/* 18 */     if (!bool) {  } else { throw new NoWhenBranchMatchedException(); }  return (bool == true) ? (R)onIncomplete.invoke(incompleteOrNull-impl(arg0)) : (R)"JD-Core does not support Kotlin"; }
+/*    */   public static boolean equals-impl(Object arg0, Object other) { return !(other instanceof Outcome) ? false : (!!Intrinsics.areEqual(arg0, ((Outcome)other).unbox-impl())); }
+/*    */   public boolean equals(Object other) { return equals-impl(this.value, other); } private static <I, T> Object constructor-impl(Object value) { return value; } public static final boolean equals-impl0(Object p1, Object p2) { return Intrinsics.areEqual(p1, p2); } @Metadata(mv = {2, 1, 0}, k = 1, xi = 48, d1 = {"\000\f\n\002\030\002\n\002\020\000\n\002\b\006\b\002\030\0002\0020\001B\021\022\b\020\002\032\004\030\0010\001¢\006\004\b\003\020\004R\023\020\002\032\004\030\0010\001¢\006\b\n\000\032\004\b\005\020\006¨\006\007"}, d2 = {"Lcom/intellij/ml/llm/matterhorn/activation/state/model/Outcome$Incomplete;", "", "incompleteValue", "<init>", "(Ljava/lang/Object;)V", "getIncompleteValue", "()Ljava/lang/Object;", "state.model"}) private static final class Incomplete
+/*    */   {
+/* 22 */     public Incomplete(@Nullable Object incompleteValue) { this.incompleteValue = incompleteValue; } @Nullable private final Object incompleteValue; @Nullable public final Object getIncompleteValue() { return this.incompleteValue; } } @Metadata(mv = {2, 1, 0}, k = 1, xi = 48, d1 = {"\000\030\n\002\030\002\n\002\020\000\n\002\b\003\n\002\030\002\n\002\020\001\n\002\b\t\b\003\030\0002\0020\001B\t\b\002¢\006\004\b\002\020\003J'\020\004\032\016\022\004\022\0020\006\022\004\022\002H\0070\005\"\004\b\002\020\0072\006\020\b\032\002H\007¢\006\004\b\t\020\nJ'\020\013\032\016\022\004\022\002H\f\022\004\022\0020\0060\005\"\004\b\002\020\f2\006\020\r\032\002H\f¢\006\004\b\016\020\n¨\006\017"}, d2 = {"Lcom/intellij/ml/llm/matterhorn/activation/state/model/Outcome$Companion;", "", "<init>", "()V", "ofComplete", "Lcom/intellij/ml/llm/matterhorn/activation/state/model/Outcome;", "", "T", "value", "ofComplete-l12Rbqo", "(Ljava/lang/Object;)Ljava/lang/Object;", "ofIncomplete", "I", "incomplete", "ofIncomplete-l12Rbqo", "state.model"})
+/*    */   public static final class Companion { private Companion() {}
+/*    */     @NotNull
+/* 25 */     public final <T> Object ofComplete-l12Rbqo(Object value) { return Outcome.constructor-impl(value); } @NotNull
+/* 26 */     public final <I> Object ofIncomplete-l12Rbqo(Object incomplete) { return Outcome.constructor-impl(new Outcome.Incomplete(incomplete)); }
+/*    */      }
+/*    */    }
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\ej-243.132.63.jar!\com\intellij\ml\llm\matterhorn\activation\state\model\Outcome.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

@@ -1,0 +1,18 @@
+package ai.grazie.model.task.engine;
+
+import ai.grazie.model.task.Task;
+import java.util.List;
+import kotlin.Metadata;
+import org.jetbrains.annotations.NotNull;
+
+@Metadata(mv = {1, 7, 0}, k = 1, xi = 48, d1 = {"\000\026\n\002\030\002\n\002\020\000\n\000\n\002\020 \n\002\030\002\n\002\b\003\bf\030\0002\0020\001R\030\020\002\032\b\022\004\022\0020\0040\003X¦\004¢\006\006\032\004\b\005\020\006ø\001\000\002\006\n\004\b!0\001¨\006\007À\006\001"}, d2 = {"Lai/grazie/model/task/engine/TasksProvider;", "", "tasks", "", "Lai/grazie/model/task/Task;", "getTasks", "()Ljava/util/List;", "model-task"})
+public interface TasksProvider {
+  @NotNull
+  List<Task> getTasks();
+}
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\model-task-jvm-0.4.32.jar!\ai\grazie\model\task\engine\TasksProvider.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

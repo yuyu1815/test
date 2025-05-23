@@ -1,0 +1,47 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.starter">
+  <dependencies>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.core-llm.main"/>
+    <module name="matterhorn.ej-core.main"/>
+  </dependencies>
+
+  <extensionPoints>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.matterhornStarter"
+                    beanClass="com.intellij.util.KeyedLazyInstanceEP"
+                    dynamic="true">
+      <with attribute="implementationClass" implements="com.intellij.ml.llm.matterhorn.MatterhornStarter"/>
+    </extensionPoint>
+
+    <extensionPoint
+      qualifiedName="com.intellij.ml.llm.matterhorn.matterhornCliStarter"
+      interface="com.intellij.ml.llm.matterhorn.MatterhornCliStarter"
+      dynamic="true"/>
+
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.events.serializableEventRegister"
+                    interface="com.intellij.ml.llm.matterhorn.events.SerializableEventRegister"
+                    dynamic="true"/>
+  </extensionPoints>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <appStarter id="matterhorn" implementation="com.intellij.ml.llm.matterhorn.starter.CommandLineStarter"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn.events">
+    <serializableEventRegister implementation="com.intellij.ml.llm.matterhorn.starter.MatterhornStarterEventRegister"/>
+  </extensions>
+
+  <actions>
+    <action id="CollectMatterhornCachesAction" text="Collect Junie Logs" class="com.intellij.ml.llm.matterhorn.starter.CollectMatterhornCachesAction" >
+      <add-to-group group-id="HelpMenu" anchor="after" relative-to-action="CollectZippedLogs"/>
+    </action>
+  </actions>
+
+  <applicationListeners>
+    <listener class="com.intellij.ml.llm.matterhorn.events.CoreDynamicPluginLoadingListener"
+              topic="com.intellij.ide.plugins.DynamicPluginListener"/>
+  </applicationListeners>
+
+</idea-plugin>

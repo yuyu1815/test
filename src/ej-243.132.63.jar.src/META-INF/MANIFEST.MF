@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: Gradle 8.11.1
+Version: 243.132.63
+Build-JVM: 17.0.3.1 (Oracle Corporation 17.0.3.1+2-LTS-6)
+Build-OS: Linux 6.8.0-1028-aws aarch64
+Build-Plugin: IntelliJ Platform Gradle Plugin
+Build-Plugin-Version: 2.5.0
+Platform-Type: IC
+Platform-Version: 2024.3.2.1
+Platform-Build: 243.23654.153
+Kotlin-Available: true
+Kotlin-Stdlib-Bundled: false
+Kotlin-Version: 2.1.10
+

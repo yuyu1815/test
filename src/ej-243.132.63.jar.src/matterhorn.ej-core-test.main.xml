@@ -1,0 +1,7 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.core.tests">
+  <dependencies>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main" />
+    <module name="matterhorn.matterhorn.main" />
+  </dependencies>
+</idea-plugin>

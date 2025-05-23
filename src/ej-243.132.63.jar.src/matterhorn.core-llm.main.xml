@@ -1,0 +1,31 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.core.llm">
+  <dependencies>
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+  </dependencies>
+
+  <extensionPoints>
+    <extensionPoint qualifiedName="com.intellij.ml.llm.matterhorn.propertyContainer"
+                    interface="com.intellij.ml.llm.matterhorn.settings.MatterhornPropertyContainer"
+                    dynamic="true" />
+  </extensionPoints>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <registryKey defaultValue="true" description="Use AI Platform" key="matterhorn.use.grazie2" restartRequired="true" />
+    <registryKey defaultValue="true" description="Use JBA Login" key="matterhorn.use.jba.login" />
+    <registryKey defaultValue="false" description="Use AI Platform Prompt Caching" key="matterhorn.use.grazie.prompt.caching" />
+    <ml.llm.matterhorn.propertyContainer implementation="com.intellij.ml.llm.matterhorn.core.llm.CorePropertiesContainer" />
+  </extensions>
+
+  <actions>
+    <action id="IngrazzioDropTokenAction" internal="true" text="Drop Ingrazzio Token" class="com.intellij.ml.llm.matterhorn.core.llm.ingrazzio.IngrazzioDropTokenAction" />
+  </actions>
+
+  <applicationListeners>
+    <listener class="com.intellij.ml.llm.matterhorn.core.llm.settings.MatterhornDynamicPluginListener"
+              topic="com.intellij.ide.plugins.DynamicPluginListener" />
+  </applicationListeners>
+
+</idea-plugin>

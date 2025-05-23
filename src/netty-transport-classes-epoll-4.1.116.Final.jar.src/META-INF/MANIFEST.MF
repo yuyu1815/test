@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: io.netty.netty-transport-classes-epoll.source
+Bundle-Name: Netty/Transport/Classes/Epoll
+Bundle-Version: 4.1.116.Final
+Bundle-ManifestVersion: 2
+Bundle-Vendor: The Netty Project
+Eclipse-SourceBundle: io.netty.netty-transport-classes-epoll;version="
+ 4.1.116.Final";roots:="."
+Created-By: Maven Source Plugin 3.2.0
+

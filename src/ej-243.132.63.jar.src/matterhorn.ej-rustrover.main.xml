@@ -1,0 +1,33 @@
+<idea-plugin package="com.intellij.ml.llm.matterhorn.ej.rustrover">
+  <dependencies>
+    <!--suppress PluginXmlValidity -->
+    <plugin id="com.jetbrains.rust"/>
+
+    <module name="intellij.platform.vcs.impl"/>
+    <module name="intellij.platform.collaborationTools"/>
+    <module name="intellij.platform.vcs.log.impl"/>
+    <module name="matterhorn.core.main"/>
+    <module name="matterhorn.ej-core.main"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn">
+    <ejSupportProvider implementation="com.intellij.ml.llm.matterhorn.ej.rustrover.RustRoverElectricJuniorSupportProvider" />
+    <matterhornStarter
+      key="ElectricJuniorRustRover"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.rustrover.RustRoverAgentMatterhornStarter"/>
+    <matterhornStarter
+      key="ElectricJuniorRustRoverChecker"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.rustrover.RustRoverProjectCheckMatterhornStarter"/>
+    <actions.productSpecificAllowedCommands
+      implementation="com.intellij.ml.llm.matterhorn.ej.rustrover.actions.RustRoverAllowedActions"/>
+
+    <relevance.extractors.ejElementProvider
+      filetype="Rust"
+      implementationClass="com.intellij.ml.llm.matterhorn.ej.rustrover.relevance.extractors.RustElementProvider"/>
+    <projectUpdateTrigger implementation="com.intellij.ml.llm.matterhorn.ej.rustrover.CargoProjectUpdateTrigger" />
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij.ml.llm.matterhorn.ej.core.actions.edit.checks">
+    <ejErrorChecker implementation="com.intellij.ml.llm.matterhorn.ej.rustrover.RustRoverExternalLinterErrorChecker" />
+  </extensions>
+</idea-plugin>

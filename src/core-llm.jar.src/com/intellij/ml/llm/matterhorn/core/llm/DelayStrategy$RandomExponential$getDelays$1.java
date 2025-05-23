@@ -1,0 +1,142 @@
+package com.intellij.ml.llm.matterhorn.core.llm;
+
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.RestrictedSuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlin.sequences.SequenceScope;
+
+@DebugMetadata(f = "DelayStrategy.kt", l = {30}, i = {0, 0}, s = {"L$0", "I$0"}, n = {"$this$sequence", "i"}, m = "invokeSuspend", c = "com.intellij.ml.llm.matterhorn.core.llm.DelayStrategy$RandomExponential$getDelays$1")
+@Metadata(mv = {2, 1, 0}, k = 3, xi = 48, d1 = {"\000\016\n\000\n\002\020\002\n\002\030\002\n\002\020\t\020\000\032\0020\001*\b\022\004\022\0020\0030\002H\n"}, d2 = {"<anonymous>", "", "Lkotlin/sequences/SequenceScope;", ""})
+final class DelayStrategy$RandomExponential$getDelays$1 extends RestrictedSuspendLambda implements Function2<SequenceScope<? super Long>, Continuation<? super Unit>, Object> {
+  int I$0;
+  
+  int I$1;
+  
+  int label;
+  
+  DelayStrategy$RandomExponential$getDelays$1(Continuation $completion) {
+    super(2, $completion);
+  }
+  
+  public final Object invokeSuspend(Object $result) {
+    // Byte code:
+    //   0: invokestatic getCOROUTINE_SUSPENDED : ()Ljava/lang/Object;
+    //   3: astore #5
+    //   5: aload_0
+    //   6: getfield label : I
+    //   9: tableswitch default -> 167, 0 -> 32, 1 -> 132
+    //   32: aload_1
+    //   33: invokestatic throwOnFailure : (Ljava/lang/Object;)V
+    //   36: aload_0
+    //   37: getfield L$0 : Ljava/lang/Object;
+    //   40: checkcast kotlin/sequences/SequenceScope
+    //   43: astore_2
+    //   44: iconst_0
+    //   45: istore_3
+    //   46: aload_0
+    //   47: getfield this$0 : Lcom/intellij/ml/llm/matterhorn/core/llm/DelayStrategy$RandomExponential;
+    //   50: invokevirtual getMaxRetries : ()I
+    //   53: istore #4
+    //   55: iload_3
+    //   56: iload #4
+    //   58: if_icmpge -> 163
+    //   61: aload_2
+    //   62: aload_0
+    //   63: getfield this$0 : Lcom/intellij/ml/llm/matterhorn/core/llm/DelayStrategy$RandomExponential;
+    //   66: invokevirtual getStartDelayMs : ()I
+    //   69: i2d
+    //   70: aload_0
+    //   71: getfield this$0 : Lcom/intellij/ml/llm/matterhorn/core/llm/DelayStrategy$RandomExponential;
+    //   74: invokevirtual getExpBase : ()D
+    //   77: iload_3
+    //   78: i2d
+    //   79: invokestatic random : ()D
+    //   82: dadd
+    //   83: ldc2_w 0.5
+    //   86: dsub
+    //   87: invokestatic pow : (DD)D
+    //   90: dmul
+    //   91: d2l
+    //   92: invokestatic boxLong : (J)Ljava/lang/Long;
+    //   95: aload_0
+    //   96: checkcast kotlin/coroutines/Continuation
+    //   99: aload_0
+    //   100: aload_2
+    //   101: putfield L$0 : Ljava/lang/Object;
+    //   104: aload_0
+    //   105: iload_3
+    //   106: putfield I$0 : I
+    //   109: aload_0
+    //   110: iload #4
+    //   112: putfield I$1 : I
+    //   115: aload_0
+    //   116: iconst_1
+    //   117: putfield label : I
+    //   120: invokevirtual yield : (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    //   123: dup
+    //   124: aload #5
+    //   126: if_acmpne -> 156
+    //   129: aload #5
+    //   131: areturn
+    //   132: aload_0
+    //   133: getfield I$1 : I
+    //   136: istore #4
+    //   138: aload_0
+    //   139: getfield I$0 : I
+    //   142: istore_3
+    //   143: aload_0
+    //   144: getfield L$0 : Ljava/lang/Object;
+    //   147: checkcast kotlin/sequences/SequenceScope
+    //   150: astore_2
+    //   151: aload_1
+    //   152: invokestatic throwOnFailure : (Ljava/lang/Object;)V
+    //   155: aload_1
+    //   156: pop
+    //   157: iinc #3, 1
+    //   160: goto -> 55
+    //   163: getstatic kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    //   166: areturn
+    //   167: new java/lang/IllegalStateException
+    //   170: dup
+    //   171: ldc 'call to 'resume' before 'invoke' with coroutine'
+    //   173: invokespecial <init> : (Ljava/lang/String;)V
+    //   176: athrow
+    // Line number table:
+    //   Java source line number -> byte code offset
+    //   #28	-> 3
+    //   #29	-> 44
+    //   #30	-> 61
+    //   #30	-> 90
+    //   #28	-> 129
+    //   #29	-> 156
+    //   #32	-> 163
+    //   #28	-> 167
+    // Local variable table:
+    //   start	length	slot	name	descriptor
+    //   44	88	2	$this$sequence	Lkotlin/sequences/SequenceScope;
+    //   151	16	2	$this$sequence	Lkotlin/sequences/SequenceScope;
+    //   46	86	3	i	I
+    //   143	20	3	i	I
+    //   0	177	0	this	Lcom/intellij/ml/llm/matterhorn/core/llm/DelayStrategy$RandomExponential$getDelays$1;
+    //   36	131	1	$result	Ljava/lang/Object;
+  }
+  
+  public final Continuation<Unit> create(Object value, Continuation<? super DelayStrategy$RandomExponential$getDelays$1> $completion) {
+    DelayStrategy$RandomExponential$getDelays$1 delayStrategy$RandomExponential$getDelays$1 = new DelayStrategy$RandomExponential$getDelays$1($completion);
+    delayStrategy$RandomExponential$getDelays$1.L$0 = value;
+    return (Continuation<Unit>)delayStrategy$RandomExponential$getDelays$1;
+  }
+  
+  public final Object invoke(SequenceScope p1, Continuation<?> p2) {
+    return ((DelayStrategy$RandomExponential$getDelays$1)create(p1, p2)).invokeSuspend(Unit.INSTANCE);
+  }
+}
+
+
+/* Location:              C:\Users\yuzum\Downloads\ej-release-243.132.63.zip!\ej\lib\core-llm.jar!\com\intellij\ml\llm\matterhorn\core\llm\DelayStrategy$RandomExponential$getDelays$1.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */
